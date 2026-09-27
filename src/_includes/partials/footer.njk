@@ -1,0 +1,58 @@
+{%- set base = "/" + lang + "/" -%}
+<footer class="site-footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="{{ base }}" aria-label="{{ t.siteName }}">
+        <img src="/assets/brand/logos/asmagh-bilingual-horizontal-cream.svg" alt="{{ t.siteName }}" width="1032" height="268" loading="lazy">
+      </a>
+      <p>{{ t.footer.about }}</p>
+    </div>
+
+    <div class="footer__col">
+      <h2 class="footer__title">{{ t.footer.quickLinks }}</h2>
+      <ul class="footer__links">
+        <li><a href="{{ base }}">{{ t.nav.home }}</a></li>
+        <li><a href="{{ base }}about/">{{ t.nav.about }}</a></li>
+        <li><a href="{{ base }}products/">{{ t.nav.products }}</a></li>
+        <li><a href="{{ base }}quality/">{{ t.nav.quality }}</a></li>
+        <li><a href="{{ base }}export/">{{ t.nav.export }}</a></li>
+        <li><a href="{{ base }}contact/">{{ t.nav.contact }}</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col footer__col--wide">
+      <h2 class="footer__title">{{ t.footer.products }}</h2>
+      <ul class="footer__links footer__links--cols">
+        {%- for p in products %}
+        <li><a href="{{ base }}products/{{ p.slug }}/">{{ p[lang].name }}</a></li>
+        {%- endfor %}
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h2 class="footer__title">{{ t.footer.contact }}</h2>
+      <ul class="footer__contact">
+        <li>{% icon "location" %}<span>{{ site.contact.address[lang] }}</span></li>
+        <li>{% icon "phone" %}<a href="tel:{{ site.contact.phoneHref }}" dir="ltr">{{ site.contact.phone }}</a></li>
+        <li>{% icon "chat" %}<a href="https://wa.me/{{ site.contact.whatsapp }}" rel="noopener" target="_blank">{{ i18n[lang].contact.whatsapp }}</a></li>
+        <li>{% icon "email" %}<a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></li>
+      </ul>
+      {%- if site.social.length %}
+      <ul class="footer__social">
+        {%- for s in site.social %}
+        <li><a href="{{ s.url }}" rel="noopener" target="_blank">{{ s.name }}</a></li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>© {{ "" | year }} {{ t.siteName }}. {{ t.footer.rights }}</p>
+    <p>
+      <a href="{{ base }}credits/">{{ t.footer.credits }}</a>
+      <span aria-hidden="true">·</span>
+      <a href="{{ page.url | swapLang(lang) }}" hreflang="{{ 'en' if lang == 'ar' else 'ar' }}" lang="{{ 'en' if lang == 'ar' else 'ar' }}">{{ t.otherLangName }}</a>
+    </p>
+  </div>
+</footer>

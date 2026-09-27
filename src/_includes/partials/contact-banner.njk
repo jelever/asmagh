@@ -1,0 +1,11 @@
+{%- from "macros.njk" import tt -%}
+<section class="banner" aria-labelledby="banner-title">
+  <img class="banner__curve" src="/assets/brand/deco/curve-arc-deep.svg" alt="" aria-hidden="true">
+  <div class="banner__inner container">
+    <img class="banner__deco banner__deco--start" src="/assets/brand/deco/drop-rings-cream.svg" alt="" aria-hidden="true" loading="lazy">
+    <span class="banner__icon">{% icon "chat" %}</span>
+    <h2 class="h3" id="banner-title">{{ tt(t.banner.title) }}</h2>
+    <p>{{ t.banner.text }}</p>
+    <a class="btn btn--light btn--lg" href="/{{ lang }}/contact/">{{ t.contactUs }}</a>
+  </div>
+</section>

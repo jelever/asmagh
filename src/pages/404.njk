@@ -1,0 +1,30 @@
+---
+permalink: "/404.html"
+layout: layouts/base.njk
+lang: ar
+pageClass: notfound
+hideBanner: true
+eleventyExcludeFromCollections: true
+metaTitle: "الصفحة غير موجودة · Page not found | Asmagh"
+metaDescription: "الصفحة غير موجودة · Page not found"
+---
+{%- set ar = i18n.ar.notFound -%}
+{%- set en = i18n.en.notFound -%}
+<section class="page-hero page-hero--404">
+  <img class="page-hero__rings" src="/assets/brand/deco/drop-rings-cream.svg" alt="" aria-hidden="true">
+  <div class="container notfound">
+    <p class="notfound__code" aria-hidden="true">404</p>
+    <div class="notfound__cols">
+      <div>
+        <h1 class="h3">{{ ar.title }}</h1>
+        <p>{{ ar.text }}</p>
+        <a class="btn btn--light" href="/ar/">{{ ar.cta }}</a>
+      </div>
+      <div lang="en" dir="ltr">
+        <h2 class="h3">{{ en.title }}</h2>
+        <p>{{ en.text }}</p>
+        <a class="btn btn--light" href="/en/">{{ en.cta }}</a>
+      </div>
+    </div>
+  </div>
+</section>

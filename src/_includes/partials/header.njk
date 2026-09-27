@@ -1,0 +1,58 @@
+{%- set base = "/" + lang + "/" -%}
+{%- set navItems = [
+  { key: "about", href: base + "about/" },
+  { key: "products", href: base + "products/", sub: true },
+  { key: "quality", href: base + "quality/" },
+  { key: "export", href: base + "export/" },
+  { key: "contact", href: base + "contact/" }
+] -%}
+<header class="site-header" data-header>
+  <div class="utility">
+    <div class="container utility__inner">
+      <a class="utility__link" href="mailto:{{ site.contact.email }}">{% icon "email" %}<span dir="ltr">{{ site.contact.email }}</span></a>
+      <a class="utility__link" href="tel:{{ site.contact.phoneHref }}">{% icon "phone" %}<span dir="ltr">{{ site.contact.phone }}</span></a>
+      <a class="utility__link" href="{{ page.url | swapLang(lang) }}" hreflang="{{ 'en' if lang == 'ar' else 'ar' }}" lang="{{ 'en' if lang == 'ar' else 'ar' }}">{% icon "language" %}{{ t.otherLangName }}</a>
+      <a class="utility__cta" href="{{ base }}contact/">{{ t.requestQuote }}</a>
+    </div>
+  </div>
+
+  <div class="container header__bar">
+    <a class="header__logo" href="{{ base }}" aria-label="{{ t.siteName }} — {{ t.homeLabel }}">
+      <img class="logo logo--wide" src="/assets/brand/logos/asmagh-bilingual-horizontal-cream.svg" alt="{{ t.siteName }}" width="1032" height="268">
+      <img class="logo logo--compact" src="/assets/brand/logos/asmagh-{{ lang }}-horizontal-cream.svg" alt="" width="{{ 556 if lang == 'ar' else 774 }}" height="{{ 277 if lang == 'ar' else 268 }}">
+    </a>
+
+    <nav class="nav" id="site-nav" aria-label="{{ t.menu }}" data-nav>
+      <ul class="nav__list">
+        {%- for item in navItems %}
+        {%- set current = page.url.indexOf(item.href) == 0 %}
+        <li class="nav__item{% if item.sub %} has-sub{% endif %}">
+          <a class="nav__link" href="{{ item.href }}"{% if current %} aria-current="page"{% endif %}>{{ t.nav[item.key] }}</a>
+          {%- if item.sub %}
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-label="{{ t.nav.products }}" data-subtoggle><span class="chev" aria-hidden="true"></span></button>
+          <ul class="nav__sub">
+            {%- for p in products | where("group", "gum") %}
+            <li><a href="{{ base }}products/{{ p.slug }}/">{{ p[lang].name }}</a></li>
+            {%- endfor %}
+            <li><a href="{{ base }}products/#crops">{{ i18n[lang].productsPage.crops.title.a }} {{ i18n[lang].productsPage.crops.title.b }}</a></li>
+            <li><a href="{{ base }}products/">{{ t.allProducts }}</a></li>
+          </ul>
+          {%- endif %}
+        </li>
+        {%- endfor %}
+      </ul>
+
+      <div class="nav__extra">
+        <a class="nav__extra-link" href="mailto:{{ site.contact.email }}">{% icon "email" %}<span dir="ltr">{{ site.contact.email }}</span></a>
+        <a class="nav__extra-link" href="tel:{{ site.contact.phoneHref }}">{% icon "phone" %}<span dir="ltr">{{ site.contact.phone }}</span></a>
+        <a class="btn btn--light" href="{{ base }}contact/">{{ t.requestQuote }}</a>
+      </div>
+    </nav>
+
+    <a class="header__lang" href="{{ page.url | swapLang(lang) }}" hreflang="{{ 'en' if lang == 'ar' else 'ar' }}" lang="{{ 'en' if lang == 'ar' else 'ar' }}" aria-label="{{ t.otherLangName }}">{{ t.otherLangShort }}</a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" data-burger>
+      <span class="burger__lines" aria-hidden="true"></span>
+      <span class="visually-hidden" data-burger-label data-open="{{ t.menu }}" data-close="{{ t.close }}">{{ t.menu }}</span>
+    </button>
+  </div>
+</header>

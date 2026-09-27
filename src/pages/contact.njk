@@ -1,0 +1,118 @@
+---
+pagination:
+  data: site.langs
+  size: 1
+  alias: lang
+permalink: "/{{ lang }}/contact/"
+layout: layouts/base.njk
+metaKey: contact
+pageClass: contact
+hideBanner: true
+---
+{%- from "macros.njk" import tt -%}
+{%- set t = i18n[lang] -%}
+{%- set c = t.contact -%}
+{%- set f = c.fields -%}
+{%- set ph = { title: c.hero.title, text: c.hero.text, crumbs: [{ label: t.nav.contact }] } -%}
+{% include "partials/page-hero.njk" %}
+
+<section class="section">
+  <div class="container contact__layout">
+    <div class="contact__form-wrap">
+      <h2 class="h4">{{ tt(c.formTitle) }}</h2>
+      <p>{{ c.formText }}</p>
+
+      <form class="form" action="https://formspree.io/f/{{ site.formspreeId }}" method="POST" data-form
+            data-connected="{{ 'false' if site.formspreeId == 'YOUR_FORM_ID' else 'true' }}"
+            data-msg-sending="{{ f.sending }}" data-msg-success="{{ f.success }}"
+            data-msg-error="{{ f.error }}" data-msg-not-connected="{{ f.notConnected }}">
+        <input type="hidden" name="_language" value="{{ lang }}">
+        <input type="hidden" name="_subject" value="Asmagh website enquiry" data-subject>
+        <p class="form__hp" aria-hidden="true"><label>Leave empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
+
+        <fieldset class="form__types">
+          <legend>{{ f.type }}</legend>
+          <label class="radio"><input type="radio" name="request_type" value="quote" checked> <span>{{ f.typeQuote }}</span></label>
+          <label class="radio"><input type="radio" name="request_type" value="sample"> <span>{{ f.typeSample }}</span></label>
+          <label class="radio"><input type="radio" name="request_type" value="question"> <span>{{ f.typeQuestion }}</span></label>
+        </fieldset>
+
+        <div class="form__grid">
+          <div class="field">
+            <label for="f-name">{{ f.name }} <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-company">{{ f.company }}</label>
+            <input id="f-company" name="company" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="f-email">{{ f.email }} <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-email" name="email" type="email" autocomplete="email" dir="ltr" required>
+          </div>
+          <div class="field">
+            <label for="f-phone">{{ f.phone }}</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" dir="ltr">
+          </div>
+          <div class="field">
+            <label for="f-country">{{ f.country }} <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-country" name="country" type="text" autocomplete="country-name" required>
+          </div>
+          <div class="field">
+            <label for="f-product">{{ f.product }}</label>
+            <select id="f-product" name="product" data-product-select>
+              <option value="">{{ f.productAny }}</option>
+              {%- for p in products %}
+              <option value="{{ p.slug }}">{{ p[lang].name }}</option>
+              {%- endfor %}
+              <option value="other">{{ f.productOther }}</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-qty">{{ f.quantity }}</label>
+            <input id="f-qty" name="quantity" type="text" placeholder="{{ f.quantityHint }}">
+          </div>
+          <div class="field">
+            <label for="f-incoterm">{{ f.incoterm }}</label>
+            <select id="f-incoterm" name="incoterm">
+              <option value="">—</option>
+              <option value="FOB">FOB Port Sudan</option>
+              <option value="CFR">CFR</option>
+              <option value="CIF">CIF</option>
+              <option value="other">{{ f.incotermOther }}</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label for="f-port">{{ f.port }}</label>
+            <input id="f-port" name="destination_port" type="text">
+          </div>
+          <div class="field field--full">
+            <label for="f-message">{{ f.message }} <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="f-message" name="message" rows="5" placeholder="{{ f.messageHint }}" required></textarea>
+          </div>
+        </div>
+
+        <p class="form__privacy">{{ f.privacy }}</p>
+        <button class="btn btn--lg" type="submit" data-submit>{{ f.submit }}</button>
+        <p class="form__status" role="status" aria-live="polite" data-status></p>
+      </form>
+    </div>
+
+    <aside class="contact__aside">
+      <div class="facts-card facts-card--deep">
+        <h2 class="h6">{{ c.details }}</h2>
+        {%- if site.contact.placeholder %}
+        <p class="facts-card__note">{{ c.placeholderNote }}</p>
+        {%- endif %}
+        <ul class="contact-list">
+          <li>{% icon "location" %}<div><span class="contact-list__label">{{ c.address }}</span>{{ site.contact.address[lang] }}</div></li>
+          <li>{% icon "phone" %}<div><span class="contact-list__label">{{ c.phone }}</span><a href="tel:{{ site.contact.phoneHref }}" dir="ltr">{{ site.contact.phone }}</a></div></li>
+          <li>{% icon "chat" %}<div><span class="contact-list__label">{{ c.whatsapp }}</span><a href="https://wa.me/{{ site.contact.whatsapp }}" rel="noopener" target="_blank" dir="ltr">+{{ site.contact.whatsapp }}</a></div></li>
+          <li>{% icon "email" %}<div><span class="contact-list__label">{{ c.email }}</span><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></div></li>
+          <li>{% icon "crop-year" %}<div><span class="contact-list__label">{{ c.hours }}</span>{{ site.contact.hours[lang] }}</div></li>
+        </ul>
+      </div>
+      <img class="contact__map" src="/assets/brand/map/sudan-outline-teal.svg" alt="" aria-hidden="true" loading="lazy">
+    </aside>
+  </div>
+</section>

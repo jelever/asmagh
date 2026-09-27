@@ -1,0 +1,106 @@
+---
+pagination:
+  data: productPages
+  size: 1
+  alias: entry
+permalink: "/{{ entry.lang }}/products/{{ entry.product.slug }}/"
+layout: layouts/base.njk
+pageClass: product
+eleventyComputed:
+  lang: "{{ entry.lang }}"
+  metaTitle: "{{ entry.product[entry.lang].name }} | {{ i18n[entry.lang].siteName }}"
+  metaDescription: "{{ entry.product[entry.lang].short }}"
+---
+{%- from "macros.njk" import tt, photo -%}
+{%- set t = i18n[lang] -%}
+{%- set pt = t.product -%}
+{%- set p = entry.product -%}
+{%- set c = p[lang] -%}
+{%- set base = "/" + lang + "/" -%}
+{%- set ph = {
+  title: { a: "", b: c.name },
+  text: c.short,
+  image: p.image,
+  alt: c.name,
+  crumbs: [{ label: t.nav.products, href: base + "products/" }, { label: c.name }]
+} -%}
+{% include "partials/page-hero.njk" %}
+
+<section class="section">
+  <div class="container product__layout">
+    <div class="product__main">
+      <h2 class="h5" data-animate>{{ pt.overview }}</h2>
+      {%- for para in c.intro %}
+      <p data-animate>{{ para }}</p>
+      {%- endfor %}
+
+      <h2 class="h5" data-animate>{{ pt.grades }}</h2>
+      <div class="table-wrap" data-animate>
+        <table class="spec-table">
+          <thead>
+            <tr><th scope="col">{{ pt.grade }}</th><th scope="col">{{ pt.spec }}</th></tr>
+          </thead>
+          <tbody>
+            {%- for g in c.grades %}
+            <tr><th scope="row">{{ g.name }}</th><td>{{ g.spec }}</td></tr>
+            {%- endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="h5" data-animate>{{ pt.forms }}</h2>
+      <ul class="chips chips--lg" data-animate>
+        {%- for f in c.forms %}
+        <li>{{ f }}</li>
+        {%- endfor %}
+      </ul>
+
+      <h2 class="h5" data-animate>{{ pt.uses }}</h2>
+      <ul class="drop-list" data-animate>
+        {%- for u in c.uses %}
+        <li>{{ u }}</li>
+        {%- endfor %}
+      </ul>
+
+      <h2 class="h5" data-animate>{{ pt.exportTitle }}</h2>
+      <p data-animate>{{ pt.exportText }}</p>
+    </div>
+
+    <aside class="product__aside">
+      <div class="facts-card">
+        <h2 class="h6">{{ pt.keyFacts }}</h2>
+        <dl>
+          <div><dt>{{ pt.botanical }}</dt><dd><i dir="ltr">{{ p.facts.botanical }}</i></dd></div>
+          {%- if p.facts.hs %}
+          <div><dt>{{ pt.hs }}</dt><dd dir="ltr">{{ p.facts.hs }}</dd></div>
+          {%- endif %}
+          <div><dt>{{ pt.packing }}</dt><dd>{{ p.facts.packing[lang] }}</dd></div>
+          <div><dt>{{ pt.load }}</dt><dd>{{ p.facts.load[lang] }}</dd></div>
+          <div><dt>{{ pt.port }}</dt><dd>{{ pt.portValue }}</dd></div>
+        </dl>
+        <p class="facts-card__note">{{ pt.hsNote }}</p>
+        <a class="btn btn--block" href="{{ base }}contact/?product={{ p.slug }}">{{ t.requestQuote }}</a>
+        <a class="btn btn--outline btn--block" href="{{ base }}contact/?product={{ p.slug }}&amp;type=sample">{{ t.requestSample }}</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="container">
+    <h2 class="h4 section-title" data-animate>{{ pt.related }}</h2>
+    <ul class="product-grid product-grid--4">
+      {%- for o in products | related(p.slug) %}
+      <li class="product-card" data-animate>
+        <a href="{{ base }}products/{{ o.slug }}/">
+          <span class="product-card__media"><img src="{{ photo(o.image) }}" alt="" width="1000" height="750" loading="lazy"></span>
+          <span class="product-card__body">
+            <span class="product-card__name h6">{{ o[lang].name }}</span>
+            <span class="link-arrow">{{ t.viewDetails }}{% icon "arrow-right" %}</span>
+          </span>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

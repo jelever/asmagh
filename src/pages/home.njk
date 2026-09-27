@@ -1,0 +1,186 @@
+---
+pagination:
+  data: site.langs
+  size: 1
+  alias: lang
+permalink: "/{{ lang }}/"
+layout: layouts/base.njk
+metaKey: home
+pageClass: home
+---
+{%- from "macros.njk" import tt, photo -%}
+{%- set t = i18n[lang] -%}
+{%- set h = t.home -%}
+{%- set base = "/" + lang + "/" -%}
+
+{# ── Hero carousel ───────────────────────────────────────────── #}
+<section class="hero" data-carousel aria-roledescription="carousel" aria-label="{{ t.siteName }}">
+  <img class="hero__scatter" src="/assets/brand/deco/drops-scatter-cream.svg" alt="" aria-hidden="true">
+  <div class="hero__slides">
+    {%- for s in h.slides %}
+    <div class="hero__slide{% if loop.first %} is-active{% endif %}" data-slide role="group" aria-roledescription="slide" aria-label="{{ loop.index }} / {{ h.slides.length }}"{% if not loop.first %} inert{% endif %}>
+      <div class="hero__text">
+        {%- if loop.first %}
+        <h1 class="hero__title">{{ tt(s.title) }}</h1>
+        {%- else %}
+        <p class="hero__title">{{ tt(s.title) }}</p>
+        {%- endif %}
+        <p class="hero__lead">{{ s.text }}</p>
+        <a class="btn btn--light btn--lg hero__cta" href="/{{ lang }}{{ s.href }}">{{ s.cta }}</a>
+      </div>
+      <div class="hero__media">
+        <img src="{{ photo(s.image) }}" alt="{{ s.alt }}" width="1600" height="1067"{% if not loop.first %} loading="lazy"{% else %} fetchpriority="high"{% endif %}>
+        <span class="hero__arc" aria-hidden="true"></span>
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+  <div class="hero__dots container">
+    {%- for s in h.slides %}
+    <button class="hero__dot{% if loop.first %} is-active{% endif %}" type="button" data-dot="{{ loop.index0 }}" aria-label="{{ t.slide }} {{ loop.index }}"{% if loop.first %} aria-current="true"{% endif %}></button>
+    {%- endfor %}
+  </div>
+</section>
+
+{# ── Intro + metrics (olamagri "metrics" block) ─────────────── #}
+<section class="metrics section section--deep">
+  <img class="deco deco--rings-end" src="/assets/brand/deco/drop-rings-cream.svg" alt="" aria-hidden="true" loading="lazy">
+  <div class="container metrics__inner">
+    <div class="metrics__intro" data-animate>
+      <h2 class="h3">{{ tt(h.intro.title) }}</h2>
+      {%- for p in h.intro.paragraphs %}
+      <p>{{ p }}</p>
+      {%- endfor %}
+    </div>
+    <ul class="metrics__grid">
+      {%- for m in site.metrics %}
+      <li class="metric" data-animate>
+        {% icon m.icon, "metric__icon" %}
+        <div>
+          <p class="metric__value"><span data-count="{{ m.value }}">{{ m.value }}</span>{{ m.suffix }}</p>
+          <p class="metric__label">{{ h.metrics[m.key] }}</p>
+        </div>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+{# ── About split ─────────────────────────────────────────────── #}
+<section class="section split">
+  <div class="container split__inner">
+    <div class="split__media" data-animate="reveal">
+      <img src="{{ photo(h.about.image) }}" alt="{{ h.about.alt }}" width="1600" height="1067" loading="lazy">
+    </div>
+    <div class="split__text" data-animate>
+      <h2 class="h4">{{ tt(h.about.title) }}</h2>
+      {%- for p in h.about.text %}
+      <p>{{ p }}</p>
+      {%- endfor %}
+      <a class="btn" href="{{ base }}about/">{{ h.about.cta }}</a>
+    </div>
+  </div>
+</section>
+
+{# ── Product list with hover preview ─────────────────────────── #}
+<section class="section showcase" data-showcase>
+  <div class="container showcase__inner">
+    <div class="showcase__intro">
+      <h2 class="h4" data-animate>{{ tt(h.products.title) }}</h2>
+      <p data-animate>{{ h.products.text }}</p>
+      <div class="showcase__preview" aria-hidden="true">
+        {%- for p in products %}
+        <img src="{{ photo(p.image) }}" alt="" data-preview="{{ p.slug }}" loading="lazy"{% if loop.first %} class="is-active"{% endif %}>
+        {%- endfor %}
+      </div>
+      <a class="btn" href="{{ base }}products/">{{ t.allProducts }}</a>
+    </div>
+    <ul class="showcase__list">
+      {%- for p in products %}
+      <li>
+        <a class="showcase__item{% if p.group == 'gum' %} showcase__item--gum{% endif %}" href="{{ base }}products/{{ p.slug }}/" data-preview-key="{{ p.slug }}">
+          <span class="showcase__thumb"><img src="{{ photo(p.image) }}" alt="" loading="lazy" width="120" height="120"></span>
+          <span class="showcase__name">{{ p[lang].name }}</span>
+          {% icon "arrow-right", "showcase__arrow" %}
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+{# ── Quality split (reversed) ───────────────────────────────── #}
+<section class="section split split--reverse split--sand">
+  <img class="deco deco--tile" src="/assets/brand/deco/drop-outline-tile-teal.svg" alt="" aria-hidden="true" loading="lazy">
+  <div class="container split__inner">
+    <div class="split__media" data-animate="reveal">
+      <img src="{{ photo(h.quality.image) }}" alt="{{ h.quality.alt }}" width="1600" height="1067" loading="lazy">
+    </div>
+    <div class="split__text" data-animate>
+      <h2 class="h4">{{ tt(h.quality.title) }}</h2>
+      {%- for p in h.quality.text %}
+      <p>{{ p }}</p>
+      {%- endfor %}
+      <a class="btn" href="{{ base }}quality/">{{ h.quality.cta }}</a>
+    </div>
+  </div>
+</section>
+
+{# ── Origin map ─────────────────────────────────────────────── #}
+<section class="section origin">
+  <div class="container origin__inner">
+    <div class="origin__text" data-animate>
+      <h2 class="h4">{{ tt(h.origin.title) }}</h2>
+      <p>{{ h.origin.text }}</p>
+      <ul class="drop-list">
+        {%- for pt in h.origin.points %}
+        <li>{{ pt }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <figure class="origin__map" data-animate="reveal">
+      <img src="/assets/brand/map/sudan-origin-map.svg" alt="{{ h.origin.mapAlt }}" width="840" height="746" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+{# ── Industries slider (replaces olamagri's news carousel) ──── #}
+<section class="section industries" data-slider>
+  <div class="container">
+    <div class="industries__head">
+      <div>
+        <h2 class="h4" data-animate>{{ tt(h.industries.title) }}</h2>
+        <p data-animate>{{ h.industries.text }}</p>
+      </div>
+      <div class="slider-nav">
+        <button class="slider-nav__btn slider-nav__btn--prev" type="button" data-prev aria-label="{{ t.previous }}">{% icon "arrow-right" %}</button>
+        <button class="slider-nav__btn" type="button" data-next aria-label="{{ t.next }}">{% icon "arrow-right" %}</button>
+      </div>
+    </div>
+    <ul class="industries__track" data-track tabindex="0" aria-label="{{ h.industries.title.a }} {{ h.industries.title.b }}">
+      {%- for it in h.industries.items %}
+      <li class="industry-card">
+        <span class="badge">{% icon it.icon %}</span>
+        <h3 class="h6">{{ it.title }}</h3>
+        <p>{{ it.text }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+{# ── Large image with overlay CTA ───────────────────────────── #}
+<section class="section overlay-cta">
+  <div class="container">
+    <div class="overlay-cta__box" data-animate="reveal">
+      <img src="{{ photo(h.cta.image) }}" alt="{{ h.cta.alt }}" width="1600" height="1067" loading="lazy">
+      <div class="overlay-cta__content">
+        <h2 class="h4">{{ tt(h.cta.title) }}</h2>
+        <div class="overlay-cta__side">
+          <p>{{ h.cta.text }}</p>
+          <a class="btn btn--light" href="{{ base }}contact/">{{ h.cta.cta }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

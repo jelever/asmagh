@@ -1,0 +1,44 @@
+---
+pagination:
+  data: site.langs
+  size: 1
+  alias: lang
+permalink: "/{{ lang }}/credits/"
+layout: layouts/base.njk
+metaKey: credits
+pageClass: credits
+hideBanner: true
+---
+{%- from "macros.njk" import tt, photo -%}
+{%- set t = i18n[lang] -%}
+{%- set c = t.credits -%}
+{%- set ph = { title: c.title, text: c.text, crumbs: [{ label: t.footer.credits }] } -%}
+{% include "partials/page-hero.njk" %}
+
+<section class="section">
+  <div class="container">
+    <div class="table-wrap">
+      <table class="spec-table credits-table">
+        <thead>
+          <tr>
+            <th scope="col">{{ c.photo }}</th>
+            <th scope="col">{{ c.author }}</th>
+            <th scope="col">{{ c.license }}</th>
+            <th scope="col">{{ c.source }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for cr in credits %}
+          <tr>
+            <td><img src="{{ photo(cr.file) }}" alt="" width="96" height="64" loading="lazy"></td>
+            <td dir="auto">{{ cr.author }}</td>
+            <td dir="ltr">{% if cr.licenseUrl %}<a href="{{ cr.licenseUrl }}" rel="noopener license" target="_blank">{{ cr.license }}</a>{% else %}{{ cr.license }}{% endif %}</td>
+            <td dir="ltr"><a href="{{ cr.source }}" rel="noopener" target="_blank">{{ cr.title }}</a></td>
+          </tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="note">{{ c.fontNote }}</p>
+  </div>
+</section>

@@ -1,0 +1,80 @@
+---
+pagination:
+  data: site.langs
+  size: 1
+  alias: lang
+permalink: "/{{ lang }}/about/"
+layout: layouts/base.njk
+metaKey: about
+pageClass: about
+---
+{%- from "macros.njk" import tt, photo -%}
+{%- set t = i18n[lang] -%}
+{%- set a = t.about -%}
+{%- set ph = { title: a.hero.title, text: a.hero.text, crumbs: [{ label: t.nav.about }] } -%}
+{% include "partials/page-hero.njk" %}
+
+<section class="section split">
+  <div class="container split__inner">
+    <div class="split__media" data-animate="reveal">
+      <img src="{{ photo(a.who.image) }}" alt="{{ a.who.alt }}" width="1600" height="1067" loading="lazy">
+    </div>
+    <div class="split__text" data-animate>
+      <h2 class="h4">{{ tt(a.who.title) }}</h2>
+      {%- for p in a.who.paragraphs %}
+      <p>{{ p }}</p>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="container">
+    <ul class="card-grid card-grid--3">
+      {%- for c in a.vmv %}
+      <li class="card card--leaf" data-animate>
+        <span class="badge badge--teal">{% icon c.icon %}</span>
+        <h2 class="h5">{{ c.title }}</h2>
+        <p>{{ c.text }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="h4 section-title" data-animate>{{ tt(a.why.title) }}</h2>
+    <ul class="feature-grid">
+      {%- for f in a.why.items %}
+      <li class="feature" data-animate>
+        {% icon f.icon, "feature__icon" %}
+        <h3 class="h6">{{ f.title }}</h3>
+        <p>{{ f.text }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--deep facts">
+  <img class="deco deco--rings-end" src="/assets/brand/deco/drop-rings-cream.svg" alt="" aria-hidden="true" loading="lazy">
+  <div class="container facts__inner">
+    <h2 class="h3" data-animate>{{ tt(a.facts.title) }}</h2>
+    <ul class="facts__list">
+      {%- for f in a.facts.items %}
+      <li data-animate>{% icon "gum-tear" %}<span>{{ f }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section sustain">
+  <div class="container sustain__inner" data-animate>
+    <h2 class="h4">{{ tt(a.sustain.title) }}</h2>
+    {%- for p in a.sustain.text %}
+    <p>{{ p }}</p>
+    {%- endfor %}
+  </div>
+  <img class="sustain__horizon" src="/assets/brand/deco/acacia-horizon-teal.svg" alt="" aria-hidden="true" loading="lazy">
+</section>

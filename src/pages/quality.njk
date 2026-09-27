@@ -1,0 +1,66 @@
+---
+pagination:
+  data: site.langs
+  size: 1
+  alias: lang
+permalink: "/{{ lang }}/quality/"
+layout: layouts/base.njk
+metaKey: quality
+pageClass: quality
+---
+{%- from "macros.njk" import tt, photo -%}
+{%- set t = i18n[lang] -%}
+{%- set q = t.quality -%}
+{%- set ph = { title: q.hero.title, text: q.hero.text, crumbs: [{ label: t.nav.quality }] } -%}
+{% include "partials/page-hero.njk" %}
+
+<section class="section">
+  <div class="container">
+    <div class="section-head section-head--center" data-animate>
+      <h2 class="h4">{{ tt(q.intro.title) }}</h2>
+      <p>{{ q.intro.text }}</p>
+    </div>
+    <ol class="steps">
+      {%- for s in q.steps %}
+      <li class="step" data-animate>
+        <span class="step__num" aria-hidden="true">{{ loop.index }}</span>
+        <span class="badge badge--teal">{% icon s.icon %}</span>
+        <h3 class="h6">{{ s.title }}</h3>
+        <p>{{ s.text }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section section--deep checks">
+  <img class="deco deco--rings-end" src="/assets/brand/deco/drop-rings-cream.svg" alt="" aria-hidden="true" loading="lazy">
+  <div class="container checks__inner">
+    <div data-animate>
+      <h2 class="h3">{{ tt(q.checks.title) }}</h2>
+      <p>{{ q.checks.text }}</p>
+    </div>
+    <div>
+      <ul class="facts__list">
+        {%- for c in q.checks.items %}
+        <li data-animate>{% icon "quality-shield" %}<span>{{ c }}</span></li>
+        {%- endfor %}
+      </ul>
+      <p class="checks__note" data-animate>{{ q.checks.note }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section split split--reverse">
+  <div class="container split__inner">
+    <div class="split__media" data-animate="reveal">
+      <img src="{{ photo(q.supply.image) }}" alt="{{ q.supply.alt }}" width="1600" height="1067" loading="lazy">
+    </div>
+    <div class="split__text" data-animate>
+      <h2 class="h4">{{ tt(q.supply.title) }}</h2>
+      {%- for p in q.supply.text %}
+      <p>{{ p }}</p>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

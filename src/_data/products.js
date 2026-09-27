@@ -1,0 +1,649 @@
+// The product catalogue, in both languages. NO PRICES: prices are quoted on
+// request only.
+//
+// group: "gum" (our speciality, featured first) or "crop".
+// facts.hs / facts.load are indicative; the product page says so.
+// image: file in src/assets/img/photos/ (see credits.json for sources).
+
+export default [
+  {
+    slug: "gum-arabic-hashab",
+    group: "gum",
+    icon: "gum-tear",
+    image: "product-gum-arabic.jpg",
+    facts: {
+      botanical: "Acacia senegal (Senegalia senegal)",
+      hs: "1301.20",
+      packing: { en: "25 or 50 kg new PP bags", ar: "أكياس بولي بروبلين جديدة 25 أو 50 كجم" },
+      load: { en: "About 18–22 MT per 20ft container", ar: "نحو 18–22 طنًا للحاوية 20 قدمًا" },
+    },
+    en: {
+      name: "Gum Arabic — Hashab",
+      short: "Premium gum arabic from Acacia senegal, the world's reference emulsifier (E414).",
+      intro: [
+        "Hashab is the finest gum arabic. It is tapped from the Acacia senegal tree: collectors make small cuts in the bark, and the sap slowly seeps out and hardens in the dry season into pale, glassy tears.",
+        "Kordofan Hashab has long set the benchmark for quality. It dissolves completely in water, has an excellent emulsifying power and a mild taste, which is why beverage, confectionery and pharmaceutical makers specify it.",
+      ],
+      grades: [
+        { name: "Hand-picked selected (HPS)", spec: "Large, clean, pale tears picked by hand" },
+        { name: "Cleaned & sifted", spec: "Whole and broken tears, light to dark amber, with bark, sand and dust removed" },
+        { name: "Siftings", spec: "Small pieces separated during cleaning" },
+        { name: "Dust", spec: "Fine particles from cleaning and sifting" },
+      ],
+      forms: ["Raw tears", "Kibbled (granules)", "Mechanical powder"],
+      uses: [
+        "Soft drinks and flavour emulsions",
+        "Confectionery, gums and coatings",
+        "Tablet binding and coating",
+        "Cosmetics and personal care",
+        "Food fibre (about 90% soluble fibre)",
+      ],
+    },
+    ar: {
+      name: "الصمغ العربي — الهشاب",
+      short: "أجود أنواع الصمغ العربي من شجرة الأكاسيا سنغال، المستحلب المرجعي عالميًا (E414).",
+      intro: [
+        "الهشاب هو أجود أنواع الصمغ العربي، ويُستخرج من شجرة الأكاسيا سنغال: يُحدث الجامعون شقوقًا صغيرة في اللحاء، فتسيل العصارة ببطء وتتصلب في موسم الجفاف إلى دموع زجاجية فاتحة اللون.",
+        "ظل هشاب كردفان مرجعًا للجودة منذ زمن طويل، فهو يذوب كليًا في الماء، ويتمتع بقدرة استحلاب ممتازة وطعم معتدل، ولذلك تشترطه مصانع المشروبات والحلويات والأدوية.",
+      ],
+      grades: [
+        { name: "منتقى يدويًا (HPS)", spec: "دموع كبيرة نظيفة وفاتحة اللون تُنتقى يدويًا" },
+        { name: "نظيف ومغربل", spec: "دموع كاملة ومكسّرة من الكهرماني الفاتح إلى الداكن، منزوعة اللحاء والرمل والغبار" },
+        { name: "غربلة", spec: "قطع صغيرة تُفصل أثناء التنظيف" },
+        { name: "غبار", spec: "جزيئات ناعمة ناتجة عن التنظيف والغربلة" },
+      ],
+      forms: ["دموع خام", "مجروش (حبيبات)", "بودرة ميكانيكية"],
+      uses: [
+        "المشروبات الغازية ومستحلبات النكهات",
+        "الحلويات والعلكة والطبقات اللامعة",
+        "ربط الأقراص الدوائية وتغليفها",
+        "مستحضرات التجميل والعناية الشخصية",
+        "ألياف غذائية (نحو 90% ألياف ذائبة)",
+      ],
+    },
+  },
+  {
+    slug: "gum-arabic-talha",
+    group: "gum",
+    icon: "raw-tears",
+    image: "product-gum-talha.jpg",
+    facts: {
+      botanical: "Acacia seyal (Vachellia seyal)",
+      hs: "1301.20",
+      packing: { en: "25 or 50 kg new PP bags", ar: "أكياس بولي بروبلين جديدة 25 أو 50 كجم" },
+      load: { en: "About 18–22 MT per 20ft container", ar: "نحو 18–22 طنًا للحاوية 20 قدمًا" },
+    },
+    en: {
+      name: "Gum Arabic — Talha",
+      short: "Gum arabic from Acacia seyal, a versatile, cost-effective grade for food and industry.",
+      intro: [
+        "Talha is the second commercial type of gum arabic. It forms naturally on the Acacia seyal tree, which grows widely across Sudan's central and eastern clay plains, and it is collected without tapping.",
+        "Talha tears are more brittle than Hashab and darker in colour, and they usually break into smaller pieces. It is widely used in food, confectionery and industrial applications where a cost-effective gum arabic is needed.",
+      ],
+      grades: [
+        { name: "Talha cleaned", spec: "Blend of lumps and siftings (at least 65% G3 lumps, up to 35% siftings)" },
+        { name: "Talha G3", spec: "Pieces of 4 mm and above" },
+        { name: "Talha siftings", spec: "Pieces of 0.5–4 mm" },
+        { name: "Talha dust", spec: "Particles below 0.5 mm" },
+      ],
+      forms: ["Raw", "Kibbled (granules)", "Mechanical powder"],
+      uses: [
+        "Confectionery and bakery",
+        "Food fibre and texturising",
+        "Adhesives and remoistenable glues",
+        "Printing, lithography and inks",
+        "Textiles and ceramics",
+      ],
+    },
+    ar: {
+      name: "الصمغ العربي — الطلح",
+      short: "صمغ عربي من شجرة الأكاسيا سيال، درجة متعددة الاستخدامات واقتصادية للأغذية والصناعة.",
+      intro: [
+        "الطلح هو النوع التجاري الثاني من الصمغ العربي، ويتكوّن طبيعيًا على شجرة الأكاسيا سيال المنتشرة في السهول الطينية بوسط السودان وشرقه، ويُجمع دون طق.",
+        "دموع الطلح أكثر هشاشة من الهشاب وأدكن لونًا، وتتكسر عادةً إلى قطع أصغر. ويُستخدم على نطاق واسع في الأغذية والحلويات والتطبيقات الصناعية التي تحتاج صمغًا عربيًا اقتصاديًا.",
+      ],
+      grades: [
+        { name: "طلح نظيف", spec: "خليط من الكتل والغربلة (65% على الأقل كتل G3، وحتى 35% غربلة)" },
+        { name: "طلح G3", spec: "قطع بحجم 4 مم فأكثر" },
+        { name: "طلح غربلة", spec: "قطع بحجم 0.5–4 مم" },
+        { name: "طلح غبار", spec: "جزيئات أقل من 0.5 مم" },
+      ],
+      forms: ["خام", "مجروش (حبيبات)", "بودرة ميكانيكية"],
+      uses: [
+        "الحلويات والمخبوزات",
+        "الألياف الغذائية وتحسين القوام",
+        "المواد اللاصقة والصموغ",
+        "الطباعة الحجرية والأحبار",
+        "المنسوجات والسيراميك",
+      ],
+    },
+  },
+  {
+    slug: "sesame",
+    group: "crop",
+    icon: "grading",
+    image: "product-sesame.jpg",
+    facts: {
+      botanical: "Sesamum indicum",
+      hs: "1207.40",
+      packing: { en: "25 or 50 kg PP bags", ar: "أكياس بولي بروبلين 25 أو 50 كجم" },
+      load: { en: "About 19 MT per 20ft container", ar: "نحو 19 طنًا للحاوية 20 قدمًا" },
+    },
+    en: {
+      name: "Sesame Seeds",
+      short: "White, mixed and red Sudanese sesame, natural or hulled.",
+      intro: [
+        "Sudan is one of the world's leading sesame exporters. Grown mainly in the rain-fed plains of Gedaref, Sennar and Kordofan, Sudanese sesame is valued for its high oil content and clean taste.",
+      ],
+      grades: [
+        { name: "White (Gedaref)", spec: "Coloured seeds up to 5%" },
+        { name: "Mixed", spec: "Coloured seeds up to 25%" },
+        { name: "Red / brown", spec: "Coloured seeds 26% and above" },
+      ],
+      forms: ["Natural (cleaned)", "Hulled"],
+      uses: ["Oil pressing", "Tahini and halawa", "Bakery toppings", "Snacks and confectionery"],
+    },
+    ar: {
+      name: "السمسم",
+      short: "سمسم سوداني أبيض ومخلوط وأحمر، طبيعي أو مقشور.",
+      intro: [
+        "السودان من كبار مصدّري السمسم في العالم. يُزرع أساسًا في السهول المطرية بالقضارف وسنار وكردفان، ويتميز السمسم السوداني بارتفاع نسبة الزيت وطعمه النقي.",
+      ],
+      grades: [
+        { name: "أبيض (قضارفي)", spec: "بذور ملونة حتى 5%" },
+        { name: "مخلوط", spec: "بذور ملونة حتى 25%" },
+        { name: "أحمر / بني", spec: "بذور ملونة 26% فأكثر" },
+      ],
+      forms: ["طبيعي (منظف)", "مقشور"],
+      uses: ["عصر الزيت", "الطحينة والحلاوة", "تزيين المخبوزات", "الوجبات الخفيفة والحلويات"],
+    },
+  },
+  {
+    slug: "hibiscus",
+    group: "crop",
+    icon: "sustainability",
+    image: "product-hibiscus.jpg",
+    facts: {
+      botanical: "Hibiscus sabdariffa",
+      hs: "1211.90",
+      packing: { en: "20–25 kg PP bags", ar: "أكياس بولي بروبلين 20–25 كجم" },
+      load: { en: "About 5–6 MT per 20ft container", ar: "نحو 5–6 أطنان للحاوية 20 قدمًا" },
+    },
+    en: {
+      name: "Hibiscus (Karkade)",
+      short: "Sun-dried Sudanese roselle calyces, deep red and rich in flavour.",
+      intro: [
+        "Sudanese hibiscus, known locally as karkade, is grown mostly in Kordofan and Darfur and sun-dried after harvest. Its deep red calyces give an intensely coloured, tart infusion rich in vitamin C, and it is among the most sought-after hibiscus in the world.",
+      ],
+      grades: [
+        { name: "Whole calyx", spec: "Whole dried calyces, cleaned" },
+        { name: "Loose sepals", spec: "Whole loose petals (sepals)" },
+        { name: "Siftings", spec: "Small pieces from cleaning" },
+      ],
+      forms: ["Whole", "Cut / tea-bag cut", "Powder"],
+      uses: ["Herbal teas and infusions", "Soft drinks and syrups", "Natural food colouring", "Traditional remedies"],
+    },
+    ar: {
+      name: "الكركديه",
+      short: "كؤوس كركديه سودانية مجففة بالشمس، حمراء داكنة وغنية النكهة.",
+      intro: [
+        "يُزرع الكركديه السوداني غالبًا في كردفان ودارفور ويُجفف بالشمس بعد الحصاد. تمنح كؤوسه الحمراء الداكنة منقوعًا زاهي اللون حامض الطعم غنيًا بفيتامين C، وهو من أكثر أنواع الكركديه طلبًا في العالم.",
+      ],
+      grades: [
+        { name: "كأس كامل", spec: "كؤوس مجففة كاملة ومنظفة" },
+        { name: "سبلات مفككة", spec: "بتلات (سبلات) كاملة مفككة" },
+        { name: "غربلة (نخالة)", spec: "قطع صغيرة ناتجة عن التنظيف" },
+      ],
+      forms: ["كامل", "مقطع / لأكياس الشاي", "بودرة"],
+      uses: ["الشاي والمنقوعات العشبية", "المشروبات والشراب المركز", "صبغة غذائية طبيعية", "الطب الشعبي"],
+    },
+  },
+  {
+    slug: "olibanum",
+    group: "crop",
+    icon: "gum-on-branch",
+    image: "product-olibanum.jpg",
+    facts: {
+      botanical: "Boswellia papyrifera",
+      hs: "1301.90",
+      packing: { en: "25 or 50 kg bags", ar: "أكياس 25 أو 50 كجم" },
+      load: { en: "About 18 MT per 20ft container", ar: "نحو 18 طنًا للحاوية 20 قدمًا" },
+    },
+    en: {
+      name: "Olibanum (Frankincense)",
+      short: "Aromatic Sudanese frankincense resin for incense, perfumery and essential oil.",
+      intro: [
+        "Olibanum, or frankincense, is the fragrant resin of the Boswellia papyrifera tree, which grows on the hills of south-eastern Sudan. Like gum arabic it is tapped by hand and dried on the tree.",
+      ],
+      grades: [
+        { name: "Nagawa", spec: "Pieces over 10 mm, free of bark" },
+        { name: "Grade 1", spec: "5–10 mm, free of bark" },
+        { name: "Grade 2", spec: "2.5–5 mm, free of bark" },
+        { name: "Grade 3", spec: "Under 2.5 mm, free of bark" },
+        { name: "Grade 4", spec: "Mixed sizes with some bark" },
+      ],
+      forms: ["Raw tears"],
+      uses: ["Incense and bakhoor", "Perfumery", "Essential oil distillation", "Traditional medicine"],
+    },
+    ar: {
+      name: "اللبان (البخور)",
+      short: "لبان سوداني عطري للبخور والعطور والزيوت العطرية.",
+      intro: [
+        "اللبان هو الراتنج العطري لشجرة البوسويليا بابيريفيرا التي تنمو على تلال جنوب شرق السودان، ويُطق يدويًا ويجف على الشجرة كما هو حال الصمغ العربي.",
+      ],
+      grades: [
+        { name: "نقاوة", spec: "قطع أكبر من 10 مم، خالية من اللحاء" },
+        { name: "الدرجة الأولى", spec: "5–10 مم، خالية من اللحاء" },
+        { name: "الدرجة الثانية", spec: "2.5–5 مم، خالية من اللحاء" },
+        { name: "الدرجة الثالثة", spec: "أقل من 2.5 مم، خالية من اللحاء" },
+        { name: "الدرجة الرابعة", spec: "أحجام مختلطة مع بعض اللحاء" },
+      ],
+      forms: ["دموع خام"],
+      uses: ["البخور", "صناعة العطور", "تقطير الزيوت العطرية", "الطب الشعبي"],
+    },
+  },
+  {
+    slug: "watermelon-seeds",
+    group: "crop",
+    icon: "raw-tears",
+    image: "product-watermelon-seeds.jpg",
+    facts: {
+      botanical: "Citrullus lanatus",
+      hs: "1207.70",
+      packing: { en: "40 or 45 kg PP bags", ar: "أكياس بولي بروبلين 40 أو 45 كجم" },
+      load: { en: "About 18 MT per 20ft container", ar: "نحو 18 طنًا للحاوية 20 قدمًا" },
+    },
+    en: {
+      name: "Watermelon Seeds",
+      short: "Popular snack seeds, rich in protein, in Sudan's classic varieties.",
+      intro: [
+        "Sudan grows watermelon largely for its seeds, a favourite roasted snack across the Middle East. The seeds are cleaned and graded by size and colour.",
+      ],
+      grades: [
+        { name: "Sadir", spec: "8–12 mm, brownish" },
+        { name: "Farasha", spec: "8–12 mm, creamy" },
+        { name: "Kashair", spec: "10–14 mm, white" },
+        { name: "Jumbo", spec: "10–14 mm, white, heavier seeds" },
+      ],
+      forms: ["In-shell, raw", "Kernels"],
+      uses: ["Roasted and salted snacks", "Kernels for bakery", "Seed oil"],
+    },
+    ar: {
+      name: "بذور البطيخ",
+      short: "بذور تسالي شهيرة غنية بالبروتين، بأصنافها السودانية المعروفة.",
+      intro: [
+        "يزرع السودان البطيخ إلى حد كبير من أجل بذوره، وهي من أشهر التسالي المحمصة في الشرق الأوسط. تُنظف البذور وتُدرَّج حسب الحجم واللون.",
+      ],
+      grades: [
+        { name: "صدير", spec: "8–12 مم، مائل إلى البني" },
+        { name: "فراشة", spec: "8–12 مم، كريمي" },
+        { name: "كشير", spec: "10–14 مم، أبيض" },
+        { name: "جامبو", spec: "10–14 مم، أبيض، بذور أثقل" },
+      ],
+      forms: ["بالقشرة، خام", "لب مقشور"],
+      uses: ["التسالي المحمصة والمملحة", "اللب للمخبوزات", "زيت البذور"],
+    },
+  },
+  {
+    slug: "peanuts",
+    group: "crop",
+    icon: "kibbled",
+    image: "product-peanuts.jpg",
+    facts: {
+      botanical: "Arachis hypogaea",
+      hs: "1202.42",
+      packing: { en: "25 or 50 kg PP or jute bags", ar: "أكياس بولي بروبلين أو خيش 25 أو 50 كجم" },
+      load: { en: "About 18 MT per 20ft (kernels)", ar: "نحو 18 طنًا للحاوية 20 قدمًا (لب)" },
+    },
+    en: {
+      name: "Peanuts (Groundnuts)",
+      short: "Sudanese groundnut kernels in standard counts, and in-shell.",
+      intro: [
+        "Sudan is one of Africa's largest groundnut producers. Our kernels are sorted by count and checked for aflatoxin to meet the limits of the destination market.",
+      ],
+      grades: [
+        { name: "Kernels 50/60", spec: "Large kernels (Ashford type)" },
+        { name: "Kernels 70/80", spec: "Medium kernels (Barberton / Spanish type)" },
+        { name: "Kernels 80/90", spec: "Small kernels" },
+        { name: "In-shell 9/11", spec: "Whole pods" },
+      ],
+      forms: ["Kernels", "In-shell"],
+      uses: ["Roasted snacks", "Peanut butter", "Confectionery", "Oil pressing"],
+    },
+    ar: {
+      name: "الفول السوداني",
+      short: "لب فول سوداني بالأحجام القياسية، وبالقشرة.",
+      intro: [
+        "السودان من أكبر منتجي الفول السوداني في أفريقيا. يُفرز اللب لدينا حسب العدد ويُفحص للأفلاتوكسين ليتوافق مع حدود سوق الوصول.",
+      ],
+      grades: [
+        { name: "لب 50/60", spec: "حبات كبيرة (صنف أشفورد)" },
+        { name: "لب 70/80", spec: "حبات متوسطة (صنف باربرتون / الإسباني)" },
+        { name: "لب 80/90", spec: "حبات صغيرة" },
+        { name: "بالقشرة 9/11", spec: "قرون كاملة" },
+      ],
+      forms: ["لب", "بالقشرة"],
+      uses: ["التسالي المحمصة", "زبدة الفول السوداني", "الحلويات", "عصر الزيت"],
+    },
+  },
+  {
+    slug: "pigeon-pea",
+    group: "crop",
+    icon: "raw-tears",
+    image: "product-pigeon-pea.jpg",
+    facts: {
+      botanical: "Cajanus cajan",
+      hs: "0713.60",
+      packing: { en: "50 kg PP bags", ar: "أكياس بولي بروبلين 50 كجم" },
+      load: { en: "About 22 MT per 20ft container", ar: "نحو 22 طنًا للحاوية 20 قدمًا" },
+    },
+    en: {
+      name: "Pigeon Peas",
+      short: "Clean, freshly harvested Sudanese pigeon peas, a staple protein pulse.",
+      intro: [
+        "Pigeon peas are a drought-tolerant pulse grown in Sudan's rain-fed areas and a major source of plant protein. We supply cleaned, freshly harvested whole peas.",
+      ],
+      grades: [{ name: "Cleaned", spec: "Whole, freshly harvested, machine-cleaned" }],
+      forms: ["Whole"],
+      uses: ["Dal and split peas", "Canned and cooked pulses", "Flour"],
+    },
+    ar: {
+      name: "العدسية (بازلاء الحمام)",
+      short: "عدسية سودانية نظيفة من الحصاد الجديد، من أهم البقوليات البروتينية.",
+      intro: [
+        "العدسية من البقوليات المقاومة للجفاف تُزرع في المناطق المطرية بالسودان، وهي مصدر مهم للبروتين النباتي. نورّدها كاملة ومنظفة من الحصاد الجديد.",
+      ],
+      grades: [{ name: "نظيف", spec: "كاملة، من الحصاد الجديد، منظفة آليًا" }],
+      forms: ["كاملة"],
+      uses: ["الدال والبازلاء المجروشة", "البقوليات المعلبة والمطبوخة", "الدقيق"],
+    },
+  },
+  {
+    slug: "henna",
+    group: "crop",
+    icon: "sustainability",
+    image: "product-henna.jpg",
+    facts: {
+      botanical: "Lawsonia inermis",
+      hs: null,
+      packing: { en: "25 or 50 kg bags", ar: "أكياس 25 أو 50 كجم" },
+      load: { en: "About 20–22 MT per 20ft container", ar: "نحو 20–22 طنًا للحاوية 20 قدمًا" },
+    },
+    en: {
+      name: "Henna",
+      short: "Natural Sudanese henna leaves and powder with strong colour release.",
+      intro: [
+        "Sudanese henna, grown mainly in the north along the Nile, is known for a rich, long-lasting colour. It is harvested, sun-dried and cleaned, and supplied as leaves or finely milled powder.",
+      ],
+      grades: [{ name: "Cleaned leaves", spec: "Sun-dried, cleaned of stems and sand" }],
+      forms: ["Leaves", "Powder"],
+      uses: ["Hair colour and care", "Body art", "Natural cosmetics"],
+    },
+    ar: {
+      name: "الحناء",
+      short: "أوراق وبودرة حناء سودانية طبيعية بصبغة قوية.",
+      intro: [
+        "تُزرع الحناء السودانية أساسًا في الشمال على ضفاف النيل، وتشتهر بلونها الغني الذي يدوم طويلًا. تُحصد وتُجفف بالشمس وتُنظف، وتُورّد أوراقًا أو بودرة ناعمة.",
+      ],
+      grades: [{ name: "أوراق نظيفة", spec: "مجففة بالشمس، منزوعة السيقان والرمل" }],
+      forms: ["أوراق", "بودرة"],
+      uses: ["صبغ الشعر والعناية به", "النقش على الجسم", "مستحضرات التجميل الطبيعية"],
+    },
+  },
+  {
+    slug: "chickpeas",
+    group: "crop",
+    icon: "raw-tears",
+    image: "product-chickpeas.jpg",
+    facts: {
+      botanical: "Cicer arietinum",
+      hs: "0713.20",
+      packing: { en: "40 or 50 kg PP bags", ar: "أكياس بولي بروبلين 40 أو 50 كجم" },
+      load: { en: "About 22 MT per 20ft container", ar: "نحو 22 طنًا للحاوية 20 قدمًا" },
+    },
+    en: {
+      name: "Chickpeas",
+      short: "Sudanese chickpeas for Middle Eastern and Indian cuisines.",
+      intro: [
+        "Chickpeas are grown in northern Sudan in the winter season. We supply clean, sorted chickpeas for canning, hummus, falafel and flour.",
+      ],
+      grades: [{ name: "Cleaned", spec: "Machine-cleaned and sorted" }],
+      forms: ["Whole", "Powder (flour)"],
+      uses: ["Hummus and falafel", "Canned chickpeas", "Chickpea flour"],
+    },
+    ar: {
+      name: "الحمص",
+      short: "حمص سوداني للمطابخ الشرق أوسطية والهندية.",
+      intro: [
+        "يُزرع الحمص في شمال السودان في الموسم الشتوي. نورّده منظفًا ومفروزًا للتعليب والحمص والفلافل والدقيق.",
+      ],
+      grades: [{ name: "نظيف", spec: "منظف ومفروز آليًا" }],
+      forms: ["حبوب كاملة", "بودرة (دقيق)"],
+      uses: ["الحمص والفلافل", "الحمص المعلب", "دقيق الحمص"],
+    },
+  },
+  {
+    slug: "senna",
+    group: "crop",
+    icon: "sustainability",
+    image: "product-senna.jpg",
+    facts: {
+      botanical: "Senna alexandrina",
+      hs: "1211.90",
+      packing: { en: "Pressed bales of 200–250 kg", ar: "بالات مضغوطة 200–250 كجم" },
+      load: { en: "About 19 MT per 40ft container", ar: "نحو 19 طنًا للحاوية 40 قدمًا" },
+    },
+    en: {
+      name: "Senna Pods & Leaves",
+      short: "Sudanese (Alexandrian) senna for herbal and pharmaceutical use.",
+      intro: [
+        "Senna grows wild and cultivated in northern Sudan and has been traded as a medicinal herb for centuries. It is a recognised natural laxative used by the herbal and pharmaceutical industries.",
+      ],
+      grades: [{ name: "Cleaned", spec: "Sun-dried leaves and pods, cleaned" }],
+      forms: ["Leaves", "Pods", "Powder"],
+      uses: ["Herbal teas", "Pharmaceutical extracts", "Traditional medicine"],
+    },
+    ar: {
+      name: "السنامكة (أوراق وقرون)",
+      short: "سنامكة سودانية للاستخدامات العشبية والدوائية.",
+      intro: [
+        "تنمو السنامكة بريًا وزراعيًا في شمال السودان، وتُتداول عشبًا طبيًا منذ قرون، وهي ملين طبيعي معروف تستخدمه صناعات الأعشاب والأدوية.",
+      ],
+      grades: [{ name: "نظيف", spec: "أوراق وقرون مجففة بالشمس ومنظفة" }],
+      forms: ["أوراق", "قرون", "بودرة"],
+      uses: ["الشاي العشبي", "المستخلصات الدوائية", "الطب الشعبي"],
+    },
+  },
+  {
+    slug: "cumin",
+    group: "crop",
+    icon: "grading",
+    image: "product-cumin.jpg",
+    facts: {
+      botanical: "Cuminum cyminum",
+      hs: "0909.31",
+      packing: { en: "40 kg jute bags", ar: "أكياس خيش 40 كجم" },
+      load: { en: "About 20 MT per 40ft container", ar: "نحو 20 طنًا للحاوية 40 قدمًا" },
+    },
+    en: {
+      name: "Cumin Seeds",
+      short: "Aromatic Sudanese cumin, cleaned for the spice trade.",
+      intro: [
+        "Sudanese cumin is grown in the north and prized for its strong aroma. We supply machine-cleaned seed for spice blenders and packers.",
+      ],
+      grades: [{ name: "Cleaned", spec: "Machine-cleaned seed" }],
+      forms: ["Whole seed", "Powder"],
+      uses: ["Spice blends", "Food manufacturing", "Essential oil"],
+    },
+    ar: {
+      name: "الكمون",
+      short: "كمون سوداني عطري منظف لتجارة التوابل.",
+      intro: [
+        "يُزرع الكمون السوداني في الشمال ويُقدَّر لرائحته القوية. نورّد البذور منظفة آليًا لمصانع خلط التوابل وتعبئتها.",
+      ],
+      grades: [{ name: "نظيف", spec: "بذور منظفة آليًا" }],
+      forms: ["بذور كاملة", "بودرة"],
+      uses: ["خلطات التوابل", "التصنيع الغذائي", "الزيوت العطرية"],
+    },
+  },
+  {
+    slug: "baobab",
+    group: "crop",
+    icon: "acacia-tree",
+    image: "product-baobab.jpg",
+    facts: {
+      botanical: "Adansonia digitata",
+      hs: null,
+      packing: { en: "25 or 50 kg bags", ar: "أكياس 25 أو 50 كجم" },
+      load: { en: "About 11 MT per 20ft container", ar: "نحو 11 طنًا للحاوية 20 قدمًا" },
+    },
+    en: {
+      name: "Baobab (Gongolez)",
+      short: "The fruit of Africa's 'tree of life', naturally dried on the branch.",
+      intro: [
+        "Baobab fruit, known in Sudan as gongolez, dries naturally inside its hard shell while still on the tree. The pulp is rich in fibre and vitamin C and is increasingly used as a superfood ingredient.",
+      ],
+      grades: [{ name: "Cleaned", spec: "Pulp separated from shell and seeds" }],
+      forms: ["Whole fruit", "Pulp", "Pulp powder"],
+      uses: ["Drinks and smoothies", "Health foods", "Traditional beverages"],
+    },
+    ar: {
+      name: "التبلدي (القنقليز)",
+      short: "ثمرة \"شجرة الحياة\" الأفريقية، تجف طبيعيًا على الغصن.",
+      intro: [
+        "تجف ثمرة التبلدي، المعروفة في السودان بالقنقليز، طبيعيًا داخل قشرتها الصلبة وهي على الشجرة. لبّها غني بالألياف وفيتامين C ويزداد استخدامه مكوّنًا في الأغذية الصحية.",
+      ],
+      grades: [{ name: "نظيف", spec: "لب مفصول عن القشرة والبذور" }],
+      forms: ["ثمرة كاملة", "لب", "بودرة اللب"],
+      uses: ["العصائر والمشروبات", "الأغذية الصحية", "المشروبات الشعبية"],
+    },
+  },
+  {
+    slug: "sorghum",
+    group: "crop",
+    icon: "crop-year",
+    image: "product-sorghum.jpg",
+    facts: {
+      botanical: "Sorghum bicolor",
+      hs: "1007.90",
+      packing: { en: "50 kg PP bags", ar: "أكياس بولي بروبلين 50 كجم" },
+      load: { en: "About 22 MT per 20ft container", ar: "نحو 22 طنًا للحاوية 20 قدمًا" },
+    },
+    en: {
+      name: "Sorghum",
+      short: "Sudan's staple grain, for food and animal feed.",
+      intro: [
+        "Sorghum is Sudan's most widely grown cereal. It is drought-hardy and nutritious, used for flour and traditional foods and as a main ingredient in cattle and poultry feed.",
+      ],
+      grades: [{ name: "Cleaned", spec: "Whole grain, machine-cleaned" }],
+      forms: ["Whole grain", "Decorticated", "Flour"],
+      uses: ["Flour and traditional foods", "Animal and poultry feed", "Brewing"],
+    },
+    ar: {
+      name: "الذرة الرفيعة",
+      short: "الحبوب الرئيسية في السودان، للغذاء والأعلاف.",
+      intro: [
+        "الذرة الرفيعة أكثر الحبوب زراعةً في السودان، وهي مقاومة للجفاف ومغذية، تُستخدم في الدقيق والأطعمة التقليدية ومكوّنًا رئيسيًا في أعلاف الماشية والدواجن.",
+      ],
+      grades: [{ name: "نظيف", spec: "حبوب كاملة منظفة آليًا" }],
+      forms: ["حبوب كاملة", "مقشورة", "دقيق"],
+      uses: ["الدقيق والأطعمة التقليدية", "أعلاف الماشية والدواجن", "التخمير"],
+    },
+  },
+  {
+    slug: "millet",
+    group: "crop",
+    icon: "crop-year",
+    image: "product-millet.jpg",
+    facts: {
+      botanical: "Pennisetum glaucum",
+      hs: "1008.29",
+      packing: { en: "50 kg PP bags", ar: "أكياس بولي بروبلين 50 كجم" },
+      load: { en: "About 22 MT per 20ft container", ar: "نحو 22 طنًا للحاوية 20 قدمًا" },
+    },
+    en: {
+      name: "Pearl Millet (Dukhn)",
+      short: "Ancient, gluten-free grain from western Sudan.",
+      intro: [
+        "Pearl millet, dukhn in Sudan, is grown on the sandy soils of Kordofan and Darfur. This ancient grain is gluten-free, nutritious and a staple for a large share of the world's population.",
+      ],
+      grades: [{ name: "Cleaned", spec: "Whole grain, machine-cleaned" }],
+      forms: ["Whole grain", "Whole flour", "Decorticated flour"],
+      uses: ["Flour and porridge", "Gluten-free foods", "Bird and animal feed"],
+    },
+    ar: {
+      name: "الدخن",
+      short: "حبوب قديمة خالية من الغلوتين من غرب السودان.",
+      intro: [
+        "يُزرع الدخن في الترب الرملية بكردفان ودارفور، وهو حبوب قديمة خالية من الغلوتين ومغذية، وغذاء أساسي لنسبة كبيرة من سكان العالم.",
+      ],
+      grades: [{ name: "نظيف", spec: "حبوب كاملة منظفة آليًا" }],
+      forms: ["حبوب كاملة", "دقيق كامل", "دقيق مقشور"],
+      uses: ["الدقيق والعصيدة", "الأغذية الخالية من الغلوتين", "أعلاف الطيور والحيوانات"],
+    },
+  },
+  {
+    slug: "soybean",
+    group: "crop",
+    icon: "kibbled",
+    image: "product-soybean.jpg",
+    facts: {
+      botanical: "Glycine max",
+      hs: "1201.90",
+      packing: { en: "50 kg PP bags", ar: "أكياس بولي بروبلين 50 كجم" },
+      load: { en: "About 22 MT per 20ft container", ar: "نحو 22 طنًا للحاوية 20 قدمًا" },
+    },
+    en: {
+      name: "Soybeans",
+      short: "High-protein Sudanese soybeans, freshly harvested.",
+      intro: [
+        "Soybeans are a high-quality protein legume, increasingly grown in Sudan's irrigated schemes. We supply cleaned, freshly harvested beans for food and feed processing.",
+      ],
+      grades: [{ name: "Cleaned", spec: "Freshly harvested, machine-cleaned" }],
+      forms: ["Whole beans", "Powder"],
+      uses: ["Oil and meal", "Soy foods", "Animal feed"],
+    },
+    ar: {
+      name: "فول الصويا",
+      short: "فول صويا سوداني عالي البروتين من الحصاد الجديد.",
+      intro: [
+        "فول الصويا من البقوليات عالية الجودة البروتينية، وتتوسع زراعته في المشاريع المروية بالسودان. نورّده منظفًا من الحصاد الجديد لمصانع الأغذية والأعلاف.",
+      ],
+      grades: [{ name: "نظيف", spec: "من الحصاد الجديد، منظف آليًا" }],
+      forms: ["حبوب كاملة", "بودرة"],
+      uses: ["الزيت والكسبة", "أغذية الصويا", "الأعلاف"],
+    },
+  },
+  {
+    slug: "dried-lime",
+    group: "crop",
+    icon: "sustainability",
+    image: "product-dried-lime.jpg",
+    facts: {
+      botanical: "Citrus aurantiifolia",
+      hs: null,
+      packing: { en: "25 or 50 kg bags", ar: "أكياس 25 أو 50 كجم" },
+      load: { en: "About 10 MT per 40ft container", ar: "نحو 10 أطنان للحاوية 40 قدمًا" },
+    },
+    en: {
+      name: "Dried Lime (Loomi)",
+      short: "Sun-dried whole limes, a signature flavour of Gulf cuisine.",
+      intro: [
+        "Dried lime, or loomi, is made by drying small limes in the sun until they turn dark and aromatic. It gives a tangy, earthy flavour to Gulf, Iranian and Iraqi dishes and teas.",
+      ],
+      grades: [{ name: "Cleaned", spec: "Whole, sun-dried, cleaned" }],
+      forms: ["Whole", "Powder"],
+      uses: ["Cooking and spice blends", "Herbal tea", "Food manufacturing"],
+    },
+    ar: {
+      name: "الليمون المجفف (اللومي)",
+      short: "ليمون كامل مجفف بالشمس، نكهة مميزة في المطبخ الخليجي.",
+      intro: [
+        "يُصنع اللومي بتجفيف حبات الليمون الصغيرة تحت الشمس حتى تصبح داكنة وعطرية، ويمنح نكهة حامضة مميزة للأطباق والشاي في الخليج وإيران والعراق.",
+      ],
+      grades: [{ name: "نظيف", spec: "كامل، مجفف بالشمس، منظف" }],
+      forms: ["كامل", "بودرة"],
+      uses: ["الطبخ وخلطات التوابل", "الشاي العشبي", "التصنيع الغذائي"],
+    },
+  },
+];

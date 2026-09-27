@@ -1,0 +1,89 @@
+---
+pagination:
+  data: site.langs
+  size: 1
+  alias: lang
+permalink: "/{{ lang }}/export/"
+layout: layouts/base.njk
+metaKey: export
+pageClass: export
+---
+{%- from "macros.njk" import tt, photo -%}
+{%- set t = i18n[lang] -%}
+{%- set e = t.export -%}
+{%- set base = "/" + lang + "/" -%}
+{%- set ph = { title: e.hero.title, text: e.hero.text, crumbs: [{ label: t.nav.export }] } -%}
+{% include "partials/page-hero.njk" %}
+
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-animate>
+      <h2 class="h4">{{ tt(e.certs.title) }}</h2>
+      <p>{{ e.certs.text }}</p>
+    </div>
+    <ul class="card-grid card-grid--3">
+      {%- for c in e.certs.items %}
+      <li class="card" data-animate>
+        <span class="badge">{% icon c.icon %}</span>
+        <h3 class="h6">{{ c.title }}</h3>
+        <p>{{ c.text }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="container">
+    <h2 class="h4 section-title" data-animate>{{ tt(e.docs.title) }}</h2>
+    <ul class="feature-grid feature-grid--4">
+      {%- for d in e.docs.items %}
+      <li class="feature" data-animate>
+        {% icon d.icon, "feature__icon" %}
+        <h3 class="h6">{{ d.title }}</h3>
+        <p>{{ d.text }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container terms">
+    <div class="terms__col" data-animate>
+      <h2 class="h4">{{ tt(e.payment.title) }}</h2>
+      <ol class="term-list">
+        {%- for p in e.payment.items %}
+        <li>
+          <h3 class="h6">{{ p.title }}</h3>
+          <p>{{ p.text }}</p>
+        </li>
+        {%- endfor %}
+      </ol>
+    </div>
+    <div class="terms__col" data-animate>
+      <h2 class="h4">{{ tt(e.incoterms.title) }}</h2>
+      <p>{{ e.incoterms.text }}</p>
+      <ul class="incoterms">
+        {%- for i in e.incoterms.items %}
+        <li><strong dir="ltr">{{ i.code }}</strong><span>{{ i.text }}</span></li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section overlay-cta">
+  <div class="container">
+    <div class="overlay-cta__box overlay-cta__box--short" data-animate="reveal">
+      <img src="{{ photo('hero-gum-tears.jpg') }}" alt="" width="1600" height="1067" loading="lazy">
+      <div class="overlay-cta__content">
+        <h2 class="h4">{{ tt(e.samples.title) }}</h2>
+        <div class="overlay-cta__side">
+          <p>{{ e.samples.text }}</p>
+          <a class="btn btn--light" href="{{ base }}contact/?type=sample">{{ e.samples.cta }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

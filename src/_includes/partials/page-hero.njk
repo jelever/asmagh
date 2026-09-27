@@ -1,0 +1,24 @@
+{#- Inner-page hero. Set `ph` before including: { title: {a,b}, text, image?, alt?, crumbs?: [{label, href}] } -#}
+{%- from "macros.njk" import tt, photo -%}
+<section class="page-hero{% if ph.image %} page-hero--media{% endif %}">
+  <img class="page-hero__rings" src="/assets/brand/deco/drop-rings-cream.svg" alt="" aria-hidden="true">
+  <div class="container page-hero__inner">
+    <div class="page-hero__text">
+      <nav class="crumbs" aria-label="{{ t.breadcrumb }}">
+        <ol>
+          <li><a href="/{{ lang }}/">{{ t.homeLabel }}</a></li>
+          {%- for c in ph.crumbs %}
+          <li>{% if c.href %}<a href="{{ c.href }}">{{ c.label }}</a>{% else %}<span aria-current="page">{{ c.label }}</span>{% endif %}</li>
+          {%- endfor %}
+        </ol>
+      </nav>
+      <h1 class="h1" data-animate>{{ tt(ph.title) }}</h1>
+      {%- if ph.text %}<p class="lead" data-animate>{{ ph.text }}</p>{% endif %}
+    </div>
+    {%- if ph.image %}
+    <div class="page-hero__media" data-animate="reveal">
+      <img src="{{ photo(ph.image) }}" alt="{{ ph.alt }}" width="1200" height="900">
+    </div>
+    {%- endif %}
+  </div>
+</section>

@@ -1,0 +1,7 @@
+{#- Two-tone heading text: h.a in the base colour, h.b in the accent colour. -#}
+{%- macro tt(h) -%}
+{%- if h.a %}{{ h.a }} {% endif %}<span class="accent">{{ h.b }}</span>
+{%- endmacro -%}
+
+{#- Photo URL from a file name in src/assets/img/photos/. -#}
+{%- macro photo(file) -%}/assets/img/photos/{{ file }}{%- endmacro -%}

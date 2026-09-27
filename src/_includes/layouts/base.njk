@@ -1,0 +1,49 @@
+{%- set t = i18n[lang] -%}
+{%- set m = t.meta[metaKey] if metaKey else {} -%}
+{%- set pageTitle = metaTitle or m.title -%}
+{%- set pageDesc = metaDescription or m.description -%}
+{%- set otherLang = "en" if lang == "ar" else "ar" -%}
+<!doctype html>
+<html lang="{{ lang }}" dir="{{ t.dir }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ pageDesc }}">
+  <link rel="canonical" href="{{ page.url | absUrl(site.url) }}">
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ page.url | absUrl(site.url) }}">
+  <link rel="alternate" hreflang="{{ otherLang }}" href="{{ page.url | swapLang(lang) | absUrl(site.url) }}">
+  <link rel="alternate" hreflang="x-default" href="{{ page.url | setLang(site.defaultLang) | absUrl(site.url) }}">
+
+  <link rel="preload" href="/assets/fonts/Alexandria.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="{{ site.brand.teal }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ t.siteName }}">
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ pageDesc }}">
+  <meta property="og:url" content="{{ page.url | absUrl(site.url) }}">
+  <meta property="og:image" content="{{ '/og-image.png' | absUrl(site.url) }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="{{ 'ar_AR' if lang == 'ar' else 'en_US' }}">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="page-{{ pageClass or 'default' }}">
+  <a class="skip-link" href="#main">{{ t.skip }}</a>
+  {% include "partials/sprite.svg" %}
+  {% include "partials/header.njk" %}
+  <main id="main" tabindex="-1">
+    {{ content | safe }}
+  </main>
+  {% if not hideBanner %}{% include "partials/contact-banner.njk" %}{% endif %}
+  {% include "partials/footer.njk" %}
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

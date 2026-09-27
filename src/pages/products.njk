@@ -1,0 +1,69 @@
+---
+pagination:
+  data: site.langs
+  size: 1
+  alias: lang
+permalink: "/{{ lang }}/products/"
+layout: layouts/base.njk
+metaKey: products
+pageClass: products
+---
+{%- from "macros.njk" import tt, photo -%}
+{%- set t = i18n[lang] -%}
+{%- set pp = t.productsPage -%}
+{%- set base = "/" + lang + "/" -%}
+{%- set ph = { title: pp.hero.title, text: pp.hero.text, crumbs: [{ label: t.nav.products }] } -%}
+{% include "partials/page-hero.njk" %}
+
+<section class="section" id="gum-arabic">
+  <div class="container">
+    <div class="section-head" data-animate>
+      <h2 class="h4">{{ tt(pp.gums.title) }}</h2>
+      <p>{{ pp.gums.text }}</p>
+    </div>
+    <ul class="gum-grid">
+      {%- for p in products | where("group", "gum") %}
+      <li class="gum-card" data-animate>
+        <a class="gum-card__media" href="{{ base }}products/{{ p.slug }}/" tabindex="-1" aria-hidden="true">
+          <img src="{{ photo(p.image) }}" alt="" width="1000" height="750" loading="lazy">
+        </a>
+        <div class="gum-card__body">
+          <p class="eyebrow"><i>{{ p.facts.botanical }}</i></p>
+          <h3 class="h5"><a href="{{ base }}products/{{ p.slug }}/">{{ p[lang].name }}</a></h3>
+          <p>{{ p[lang].short }}</p>
+          <ul class="chips">
+            {%- for g in p[lang].grades %}
+            <li>{{ g.name }}</li>
+            {%- endfor %}
+          </ul>
+          <a class="btn" href="{{ base }}products/{{ p.slug }}/">{{ t.viewDetails }}</a>
+        </div>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--sand" id="crops">
+  <div class="container">
+    <div class="section-head" data-animate>
+      <h2 class="h4">{{ tt(pp.crops.title) }}</h2>
+      <p>{{ pp.crops.text }}</p>
+    </div>
+    <ul class="product-grid">
+      {%- for p in products | where("group", "crop") %}
+      <li class="product-card" data-animate>
+        <a href="{{ base }}products/{{ p.slug }}/">
+          <span class="product-card__media"><img src="{{ photo(p.image) }}" alt="" width="1000" height="750" loading="lazy"></span>
+          <span class="product-card__body">
+            <span class="product-card__name h6">{{ p[lang].name }}</span>
+            <span class="product-card__text">{{ p[lang].short }}</span>
+            <span class="link-arrow">{{ t.viewDetails }}{% icon "arrow-right" %}</span>
+          </span>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+    <p class="note" data-animate>{% icon "request-quote" %}<span>{{ pp.note }}</span></p>
+  </div>
+</section>
