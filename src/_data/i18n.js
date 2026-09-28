@@ -55,22 +55,22 @@ export default {
 
     meta: {
       home: {
-        title: "Asmagh — Sudanese gum arabic exporter (Hashab & Talha)",
+        title: "Asmagh | Sudanese gum arabic exporter (Hashab & Talha)",
         description:
           "Asmagh Sudanese Exports supplies gum arabic Hashab (Acacia senegal) and Talha (Acacia seyal) and Sudanese agricultural crops, shipped from Port Sudan worldwide.",
       },
       about: {
-        title: "About us — Asmagh Sudanese Exports",
+        title: "About us | Asmagh Sudanese Exports",
         description:
           "Who we are, what we stand for, and why buyers choose Asmagh for Sudanese gum arabic and agricultural crops.",
       },
       products: {
-        title: "Products — gum arabic and Sudanese crops | Asmagh",
+        title: "Products: gum arabic and Sudanese crops | Asmagh",
         description:
           "Gum arabic Hashab and Talha in all grades, plus sesame, hibiscus, olibanum, peanuts, watermelon seeds and more Sudanese crops.",
       },
       quality: {
-        title: "Quality & process — from the acacia tree to Port Sudan | Asmagh",
+        title: "Quality & process: from the acacia tree to Port Sudan | Asmagh",
         description:
           "How Asmagh sources, cleans, grades, tests, packs and ships gum arabic and crops, and the quality checks at every step.",
       },
@@ -158,8 +158,8 @@ export default {
         title: { a: "Where our", b: "gum grows" },
         text: "Gum arabic comes from the Sahel's gum belt, which stretches across Africa and reaches its richest stands in Sudan. Hashab is tapped from Acacia senegal; Talha forms naturally on Acacia seyal. Both travel from the belt to Port Sudan on the Red Sea for export.",
         points: [
-          "Hashab (Acacia senegal) — the premium gum of Kordofan",
-          "Talha (Acacia seyal) — harvested across the central and eastern belt",
+          "Hashab (Acacia senegal): the premium gum of Kordofan",
+          "Talha (Acacia seyal): harvested across the central and eastern belt",
           "Loaded at Port Sudan (SDPZU) on the Red Sea",
         ],
         mapAlt:
@@ -487,27 +487,27 @@ export default {
 
     banner: {
       title: { a: "تحدّث", b: "إلينا" },
-      text: "أخبرنا بما تحتاجه — المنتج والدرجة والكمية وميناء الوصول — وسيعود إليك فريقنا بعرض مناسب.",
+      text: "أخبرنا بما تحتاجه من منتج ودرجة وكمية وميناء وصول، وسيعود إليك فريقنا بعرض مناسب.",
     },
 
     meta: {
       home: {
-        title: "أصماغ — مُصدّر الصمغ العربي السوداني (الهشاب والطلح)",
+        title: "أصماغ | مُصدّر الصمغ العربي السوداني (الهشاب والطلح)",
         description:
           "أصماغ للصادرات السودانية: صمغ عربي هشاب (أكاسيا سنغال) وطلح (أكاسيا سيال) ومحاصيل زراعية سودانية، تُشحن من بورتسودان إلى جميع أنحاء العالم.",
       },
       about: {
-        title: "من نحن — أصماغ للصادرات السودانية",
+        title: "من نحن | أصماغ للصادرات السودانية",
         description:
           "تعرّف على أصماغ وقيمها ولماذا يختارنا المشترون لتوريد الصمغ العربي والمحاصيل الزراعية السودانية.",
       },
       products: {
-        title: "المنتجات — الصمغ العربي والمحاصيل السودانية | أصماغ",
+        title: "المنتجات: الصمغ العربي والمحاصيل السودانية | أصماغ",
         description:
           "صمغ الهشاب والطلح بجميع درجاته، إلى جانب السمسم والكركديه واللبان والفول السوداني وبذور البطيخ وغيرها من المحاصيل السودانية.",
       },
       quality: {
-        title: "الجودة والعمليات — من شجرة الأكاسيا إلى بورتسودان | أصماغ",
+        title: "الجودة والعمليات: من شجرة الأكاسيا إلى بورتسودان | أصماغ",
         description:
           "كيف تورّد أصماغ الصمغ العربي والمحاصيل وتنظفها وتفرزها وتفحصها وتعبئها وتشحنها، وفحوص الجودة في كل مرحلة.",
       },
@@ -595,8 +595,8 @@ export default {
         title: { a: "حيث ينمو", b: "صمغنا" },
         text: "يأتي الصمغ العربي من حزام الصمغ في منطقة الساحل الذي يمتد عبر أفريقيا ويبلغ أغنى غاباته في السودان. يُستخرج الهشاب بطق أشجار الأكاسيا سنغال، ويتكوّن الطلح طبيعيًا على أشجار الأكاسيا سيال، ثم ينتقل الاثنان من الحزام إلى بورتسودان على البحر الأحمر للتصدير.",
         points: [
-          "الهشاب (أكاسيا سنغال) — الصمغ الممتاز من كردفان",
-          "الطلح (أكاسيا سيال) — يُجمع في وسط الحزام وشرقه",
+          "الهشاب (أكاسيا سنغال): الصمغ الممتاز من كردفان",
+          "الطلح (أكاسيا سيال): يُجمع في وسط الحزام وشرقه",
           "التحميل في بورتسودان (SDPZU) على البحر الأحمر",
         ],
         mapAlt: "خريطة السودان تُظهر حزام الصمغ العربي في وسط البلاد، والخرطوم وبورتسودان",

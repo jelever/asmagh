@@ -18,7 +18,7 @@ export default [
       load: { en: "About 18–22 MT per 20ft container", ar: "نحو 18–22 طنًا للحاوية 20 قدمًا" },
     },
     en: {
-      name: "Gum Arabic — Hashab",
+      name: "Gum Arabic (Hashab)",
       short: "Premium gum arabic from Acacia senegal, the world's reference emulsifier (E414).",
       intro: [
         "Hashab is the finest gum arabic. It is tapped from the Acacia senegal tree: collectors make small cuts in the bark, and the sap slowly seeps out and hardens in the dry season into pale, glassy tears.",
@@ -40,7 +40,7 @@ export default [
       ],
     },
     ar: {
-      name: "الصمغ العربي — الهشاب",
+      name: "الصمغ العربي (الهشاب)",
       short: "أجود أنواع الصمغ العربي من شجرة الأكاسيا سنغال، المستحلب المرجعي عالميًا (E414).",
       intro: [
         "الهشاب هو أجود أنواع الصمغ العربي، ويُستخرج من شجرة الأكاسيا سنغال: يُحدث الجامعون شقوقًا صغيرة في اللحاء، فتسيل العصارة ببطء وتتصلب في موسم الجفاف إلى دموع زجاجية فاتحة اللون.",
@@ -74,7 +74,7 @@ export default [
       load: { en: "About 18–22 MT per 20ft container", ar: "نحو 18–22 طنًا للحاوية 20 قدمًا" },
     },
     en: {
-      name: "Gum Arabic — Talha",
+      name: "Gum Arabic (Talha)",
       short: "Gum arabic from Acacia seyal, a versatile, cost-effective grade for food and industry.",
       intro: [
         "Talha is the second commercial type of gum arabic. It forms naturally on the Acacia seyal tree, which grows widely across Sudan's central and eastern clay plains, and it is collected without tapping.",
@@ -96,7 +96,7 @@ export default [
       ],
     },
     ar: {
-      name: "الصمغ العربي — الطلح",
+      name: "الصمغ العربي (الطلح)",
       short: "صمغ عربي من شجرة الأكاسيا سيال، درجة متعددة الاستخدامات واقتصادية للأغذية والصناعة.",
       intro: [
         "الطلح هو النوع التجاري الثاني من الصمغ العربي، ويتكوّن طبيعيًا على شجرة الأكاسيا سيال المنتشرة في السهول الطينية بوسط السودان وشرقه، ويُجمع دون طق.",

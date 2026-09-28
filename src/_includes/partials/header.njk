@@ -17,7 +17,7 @@
   </div>
 
   <div class="container header__bar">
-    <a class="header__logo" href="{{ base }}" aria-label="{{ t.siteName }} — {{ t.homeLabel }}">
+    <a class="header__logo" href="{{ base }}" aria-label="{{ t.siteName }}{{ '،' if lang == 'ar' else ',' }} {{ t.homeLabel }}">
       <img class="logo logo--wide" src="/assets/brand/logos/asmagh-bilingual-horizontal-cream.svg" alt="{{ t.siteName }}" width="1032" height="268">
       <img class="logo logo--compact" src="/assets/brand/logos/asmagh-{{ lang }}-horizontal-cream.svg" alt="" width="{{ 556 if lang == 'ar' else 774 }}" height="{{ 277 if lang == 'ar' else 268 }}">
     </a>
