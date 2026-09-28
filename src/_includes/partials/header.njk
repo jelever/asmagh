@@ -11,7 +11,7 @@
     <div class="container utility__inner">
       <a class="utility__link" href="mailto:{{ site.contact.email }}">{% icon "email" %}<span dir="ltr">{{ site.contact.email }}</span></a>
       <a class="utility__link" href="tel:{{ site.contact.phoneHref }}">{% icon "phone" %}<span dir="ltr">{{ site.contact.phone }}</span></a>
-      <a class="utility__link" href="{{ page.url | swapLang(lang) }}" hreflang="{{ 'en' if lang == 'ar' else 'ar' }}" lang="{{ 'en' if lang == 'ar' else 'ar' }}">{% icon "language" %}{{ t.otherLangName }}</a>
+      <a class="utility__link" href="{{ page.url | swapLang(lang) }}" hreflang="{{ 'en' if lang == 'ar' else 'ar' }}" lang="{{ 'en' if lang == 'ar' else 'ar' }}">{% icon "global-export" %}{{ t.otherLangName }}</a>
       <a class="utility__cta" href="{{ base }}contact/">{{ t.requestQuote }}</a>
     </div>
   </div>
