@@ -137,6 +137,28 @@
     );
     animated.forEach(function (el) { io.observe(el); });
     counters.forEach(function (el) { io.observe(el); });
+
+    // Safety net: never leave content hidden. Anything whose top is above the
+    // bottom of the viewport is shown, which covers jumps past a section
+    // (End key, anchor links, restored scroll position) that the observer
+    // can miss.
+    var sweeping = false;
+    var sweep = function () {
+      sweeping = false;
+      var limit = window.innerHeight;
+      animated.forEach(function (el) {
+        if (!el.classList.contains("is-in") && el.getBoundingClientRect().top < limit) {
+          el.classList.add("is-in");
+          io.unobserve(el);
+        }
+      });
+    };
+    var requestSweep = function () {
+      if (!sweeping) { sweeping = true; window.requestAnimationFrame(sweep); }
+    };
+    window.addEventListener("scroll", requestSweep, { passive: true });
+    window.addEventListener("load", requestSweep);
+    window.addEventListener("pageshow", requestSweep);
   }
 
   /* ── Product showcase: hover swaps the preview photo ───────── */

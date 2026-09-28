@@ -840,13 +840,20 @@ a:hover .link-arrow .icon { transform: translateX(4px); }
   transition: opacity .8s ease, transform .8s var(--ease);
 }
 .js-animate [data-animate].is-in { opacity: 1; transform: none; }
-.js-animate [data-animate="reveal"] {
-  opacity: 1; transform: none;
-  clip-path: inset(100% 0 0 0);
-  transition: clip-path 1.3s var(--ease);
+/* Reveal: a cover in the section's background colour slides away. Never clip
+   the frame or the image to zero: a fully clipped element has no visible
+   area, so IntersectionObserver never reports it (the frame stays blank)
+   and lazy-loaded images inside it never start loading. */
+.section--sand, .split--sand { --reveal-bg: var(--sand); }
+.page-hero { --reveal-bg: var(--teal); }
+.js-animate [data-animate="reveal"] { position: relative; opacity: 1; transform: none; }
+.js-animate [data-animate="reveal"]::before {
+  content: ""; position: absolute; inset: -1px; z-index: 3; pointer-events: none;
+  background: var(--reveal-bg, var(--paper));
+  transform-origin: top; transition: transform 1.3s var(--ease);
 }
+.js-animate [data-animate="reveal"].is-in::before { transform: scaleY(0); }
 .js-animate [data-animate="reveal"] img { transform: scale(1.18); transition: transform 1.5s var(--ease); }
-.js-animate [data-animate="reveal"].is-in { clip-path: inset(0 0 0 0); }
 .js-animate [data-animate="reveal"].is-in img { transform: scale(1); }
 
 @media (prefers-reduced-motion: reduce) {
