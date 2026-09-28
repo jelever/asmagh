@@ -82,6 +82,12 @@ eleventyComputed:
           <div><dt>{{ pt.port }}</dt><dd>{{ pt.portValue }}</dd></div>
         </dl>
         <p class="facts-card__note">{{ pt.hsNote }}</p>
+        {%- if p.spec %}
+        <a class="spec-link" href="/assets/docs/{{ p.spec }}" download type="application/pdf">
+          <span class="spec-link__icon">{% icon "download-pdf" %}</span>
+          <span><strong>{{ pt.specSheet }}</strong><span class="spec-link__meta">{{ pt.specMeta }} · <span dir="ltr">{{ p.spec | docSize }}</span></span></span>
+        </a>
+        {%- endif %}
         <a class="btn btn--block" href="{{ base }}contact/?product={{ p.slug }}">{{ t.requestQuote }}</a>
         <a class="btn btn--outline btn--block" href="{{ base }}contact/?product={{ p.slug }}&amp;type=sample">{% icon "request-sample" %}{{ t.requestSample }}</a>
       </div>

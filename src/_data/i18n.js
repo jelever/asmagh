@@ -280,6 +280,8 @@ export default {
       spec: "Specification",
       forms: "Available forms",
       uses: "Main uses",
+      specSheet: "Specification sheet",
+      specMeta: "PDF, English",
       exportTitle: "Shipping & export",
       exportText:
         "A full container is normally ready to load 10 to 15 days after the contract is confirmed. Transit from Port Sudan takes about 2 to 8 weeks, depending on the destination port.",
@@ -716,6 +718,8 @@ export default {
       spec: "المواصفة",
       forms: "الأشكال المتوفرة",
       uses: "أهم الاستخدامات",
+      specSheet: "ورقة المواصفات",
+      specMeta: "ملف PDF بالإنجليزية",
       exportTitle: "الشحن والتصدير",
       exportText:
         "تكون الحاوية الكاملة جاهزة للتحميل عادةً خلال 10 إلى 15 يومًا من تأكيد العقد، ويستغرق الشحن من بورتسودان نحو أسبوعين إلى ثمانية أسابيع حسب ميناء الوصول.",

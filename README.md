@@ -34,12 +34,29 @@ npm run check      # link, meta, hreflang, h1, no-prices checks over _site/
 | `src/assets/js/main.js` | Carousel, sticky header, menu, animations, slider, form |
 | `src/assets/brand/` | Logos, decorations, masks and map from the Asmagh identity kit |
 | `src/assets/img/photos/` | Photographs (Wikimedia Commons, free licences) |
+| `src/assets/docs/` | Product specification sheets (PDF, English), linked from each product page |
 | `scripts/check.mjs` | Post-build checks, also run in CI |
+| `scripts/compress-pdfs.py` | Lossless PDF compression with a pixel-by-pixel proof (see below) |
 
 To add a product, add an entry to `src/_data/products.js` with both `en` and
 `ar` blocks and a photo in `src/assets/img/photos/` (credit it in
 `credits.json`). The product page, menus, footer, contact form and sitemap
 pick it up automatically.
+
+## Specification sheets
+
+The sheets in `src/assets/docs/` are losslessly compressed copies of the
+originals in `railway/assets/asmagh/Specification sheet papers` (58 MB down
+to 31 MB). To add or update a sheet, put the new original there and run:
+
+```bash
+pip install pymupdf pillow
+python scripts/compress-pdfs.py "../../assets/asmagh/Specification sheet papers" src/assets/docs
+```
+
+The script only keeps a copy whose every page renders pixel-identical to the
+original, with identical text. Then set the file name in the product's `spec`
+field in `src/_data/products.js`; the page shows the link and the file size.
 
 ## Before launch
 

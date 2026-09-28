@@ -4,6 +4,8 @@
 // group: "gum" (our speciality, featured first) or "crop".
 // facts.hs / facts.load are indicative; the product page says so.
 // image: file in src/assets/img/photos/ (see credits.json for sources).
+// spec: specification sheet PDF in src/assets/docs/ (English; losslessly
+//       compressed from assets/asmagh/Specification sheet papers).
 
 export default [
   {
@@ -11,6 +13,7 @@ export default [
     group: "gum",
     icon: "hand-picked",
     image: "product-gum-arabic.jpg",
+    spec: "Asmagh-Gum-Arabic-Specification-Sheet.pdf",
     facts: {
       botanical: "Acacia senegal (Senegalia senegal)",
       hs: "1301.20",
@@ -67,6 +70,7 @@ export default [
     group: "gum",
     icon: "raw-tears",
     image: "product-gum-talha.jpg",
+    spec: "Asmagh-Gum-Arabic-Specification-Sheet.pdf",
     facts: {
       botanical: "Acacia seyal (Vachellia seyal)",
       hs: "1301.20",
@@ -123,6 +127,7 @@ export default [
     group: "crop",
     icon: "sesame",
     image: "product-sesame.jpg",
+    spec: "Asmagh-Sesame-Specification-Sheet.pdf",
     facts: {
       botanical: "Sesamum indicum",
       hs: "1207.40",
@@ -163,6 +168,7 @@ export default [
     group: "crop",
     icon: "hibiscus",
     image: "product-hibiscus.jpg",
+    spec: "Asmagh-Hibiscus-Specification-Sheet.pdf",
     facts: {
       botanical: "Hibiscus sabdariffa",
       hs: "1211.90",
@@ -203,6 +209,7 @@ export default [
     group: "crop",
     icon: "frankincense",
     image: "product-olibanum.jpg",
+    spec: "Asmagh-Gum-Olibanum-Specification-Sheet.pdf",
     facts: {
       botanical: "Boswellia papyrifera",
       hs: "1301.90",
@@ -247,6 +254,7 @@ export default [
     group: "crop",
     icon: "watermelon-seeds",
     image: "product-watermelon-seeds.jpg",
+    spec: "Asmagh-Watermelon-Seeds-Specification-Sheet.pdf",
     facts: {
       botanical: "Citrullus lanatus",
       hs: "1207.70",
@@ -289,6 +297,7 @@ export default [
     group: "crop",
     icon: "peanuts",
     image: "product-peanuts.jpg",
+    spec: "Asmagh-Peanuts-Specification-Sheet.pdf",
     facts: {
       botanical: "Arachis hypogaea",
       hs: "1202.42",
@@ -331,6 +340,7 @@ export default [
     group: "crop",
     icon: "pulses",
     image: "product-pigeon-pea.jpg",
+    spec: "Asmagh-Pigeon-Pea-Specification-Sheet.pdf",
     facts: {
       botanical: "Cajanus cajan",
       hs: "0713.60",
@@ -363,6 +373,7 @@ export default [
     group: "crop",
     icon: "henna",
     image: "product-henna.jpg",
+    spec: "Asmagh-Henna-Specification-Sheet.pdf",
     facts: {
       botanical: "Lawsonia inermis",
       hs: null,
@@ -395,6 +406,7 @@ export default [
     group: "crop",
     icon: "chickpeas",
     image: "product-chickpeas.jpg",
+    spec: "Asmagh-Chickpea-Specification-Sheet.pdf",
     facts: {
       botanical: "Cicer arietinum",
       hs: "0713.20",
@@ -427,6 +439,7 @@ export default [
     group: "crop",
     icon: "senna-pods",
     image: "product-senna.jpg",
+    spec: "Asmagh-Senna-Pods-Specification-Sheet.pdf",
     facts: {
       botanical: "Senna alexandrina",
       hs: "1211.90",
@@ -459,6 +472,7 @@ export default [
     group: "crop",
     icon: "cumin",
     image: "product-cumin.jpg",
+    spec: "Asmagh-Cumin-Seeds-Specification-Sheet.pdf",
     facts: {
       botanical: "Cuminum cyminum",
       hs: "0909.31",
@@ -491,6 +505,7 @@ export default [
     group: "crop",
     icon: "baobab",
     image: "product-baobab.jpg",
+    spec: "Asmagh-Baobab-Fruit-Pulp-Specification-Sheet.pdf",
     facts: {
       botanical: "Adansonia digitata",
       hs: null,
@@ -523,6 +538,7 @@ export default [
     group: "crop",
     icon: "grains",
     image: "product-sorghum.jpg",
+    spec: "Asmagh-Sorghum-Grains-Specification-Sheet.pdf",
     facts: {
       botanical: "Sorghum bicolor",
       hs: "1007.90",
@@ -555,6 +571,7 @@ export default [
     group: "crop",
     icon: "grains",
     image: "product-millet.jpg",
+    spec: "Asmagh-Millet-Grains-Specification-Sheet.pdf",
     facts: {
       botanical: "Pennisetum glaucum",
       hs: "1008.29",
@@ -587,6 +604,7 @@ export default [
     group: "crop",
     icon: "soybean",
     image: "product-soybean.jpg",
+    spec: "Asmagh-Soybean-Specification-Sheet.pdf",
     facts: {
       botanical: "Glycine max",
       hs: "1201.90",
@@ -619,6 +637,7 @@ export default [
     group: "crop",
     icon: "dried-lime",
     image: "product-dried-lime.jpg",
+    spec: "Asmagh-Dried-Lime-Specification-Sheet.pdf",
     facts: {
       botanical: "Citrus aurantiifolia",
       hs: null,

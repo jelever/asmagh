@@ -6,7 +6,7 @@
 // PATH_PREFIX: GitHub Pages serves a project site from /asmagh/. When a custom
 // domain is attached, build with PATH_PREFIX=/ (see README.md).
 
-import { readFileSync } from "node:fs";
+import { readFileSync, statSync } from "node:fs";
 import { HtmlBasePlugin } from "@11ty/eleventy";
 
 // The full Asmagh icon sprite (97 icons, ~37 KB). Each page gets only the
@@ -72,6 +72,12 @@ export default function (eleventyConfig) {
     const start = self && self.group === "crop" ? crops.indexOf(self) + 1 : 0;
     const rotated = crops.slice(start).concat(crops.slice(0, start)).filter((p) => p.slug !== slug);
     return gums.concat(rotated).slice(0, n);
+  });
+
+  // Size of a file in src/assets/docs, e.g. "1.9 MB", for download links.
+  eleventyConfig.addFilter("docSize", (file) => {
+    const bytes = statSync(`src/assets/docs/${file}`).size;
+    return bytes >= 1e6 ? `${(bytes / 1e6).toFixed(1)} MB` : `${Math.round(bytes / 1e3)} KB`;
   });
 
   // Western digits in both languages, as on most Arabic trade sites.

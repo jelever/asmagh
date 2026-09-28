@@ -779,6 +779,20 @@ a:hover .link-arrow .icon { transform: translateX(4px); }
 .facts-card dd { margin: 2px 0 0; color: var(--teal); font-weight: 500; }
 .facts-card__note { color: var(--muted); font-size: .82rem; }
 .facts-card .btn { margin-top: 12px; }
+.spec-link {
+  display: flex; align-items: center; gap: 14px; margin: 4px 0 8px; padding: 14px 16px;
+  border: 1.5px dashed rgba(11, 61, 60, .3); border-radius: 14px;
+  color: var(--teal); text-decoration: none; line-height: 1.4;
+  transition: background-color .2s, border-color .2s;
+}
+.spec-link:hover { background: var(--tint); border-color: var(--teal); color: var(--teal); }
+.spec-link__icon {
+  display: grid; place-items: center; flex-shrink: 0; width: 44px; height: 44px;
+  border-radius: 50%; background: var(--cream); color: var(--teal);
+}
+.spec-link__icon .icon { width: 24px; height: 24px; }
+.spec-link strong { display: block; font-weight: 600; }
+.spec-link__meta { display: block; font-size: .82rem; color: var(--muted); }
 .facts-card--deep { background: var(--deep); border-color: var(--deep); color: var(--muted-on-teal); }
 .facts-card--deep h2 { color: var(--cream); }
 .facts-card--deep .facts-card__note { color: var(--amber); }

@@ -83,6 +83,9 @@ npm run check    # run before saying anything is finished; CI runs it too
   - The build inlines only the symbols a page uses, at `<!--ICON-SPRITE-->` in the base layout.
   - An unknown name fails the build.
   - `npm run check` fails if a used icon's symbol is missing from the page.
+- **Spec sheets:** never replace them with a lossy compressor.
+  - Use `scripts/compress-pdfs.py`, which proves each page is pixel-identical before keeping a copy.
+  - The originals in `assets/` are the client's files. Never write to them.
 - **Headings use `{ a, b }` pairs** for the two-tone style. The `tt()` macro
   renders `b` in the accent colour. `a` may be empty.
 - **Screenshots:** the Chrome extension's tab is hidden, so scroll animations
