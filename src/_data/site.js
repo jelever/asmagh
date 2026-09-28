@@ -44,7 +44,7 @@ export default {
   // true as written. Replace with company figures (tonnes a year, countries
   // served, years in business) when the company provides them.
   metrics: [
-    { value: 2, suffix: "", icon: "acacia-tree", key: "species" },
+    { value: 2, suffix: "", icon: "gum-on-branch", key: "species" },
     { value: 5, suffix: "", icon: "grading", key: "grades" },
     { value: 3, suffix: "", icon: "powder", key: "forms" },
     { value: 17, suffix: "", icon: "sack", key: "products" },
