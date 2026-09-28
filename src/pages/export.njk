@@ -55,6 +55,7 @@ pageClass: export
       <ol class="term-list">
         {%- for p in e.payment.items %}
         <li>
+          <span class="term-list__icon">{% icon p.icon %}</span>
           <h3 class="h6">{{ p.title }}</h3>
           <p>{{ p.text }}</p>
         </li>
@@ -81,7 +82,7 @@ pageClass: export
         <h2 class="h4">{{ tt(e.samples.title) }}</h2>
         <div class="overlay-cta__side">
           <p>{{ e.samples.text }}</p>
-          <a class="btn btn--light" href="{{ base }}contact/?type=sample">{{ e.samples.cta }}</a>
+          <a class="btn btn--light" href="{{ base }}contact/?type=sample">{% icon "request-sample" %}{{ e.samples.cta }}</a>
         </div>
       </div>
     </div>

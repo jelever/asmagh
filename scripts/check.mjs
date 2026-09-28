@@ -64,6 +64,11 @@ for (const file of html) {
     if (h1 !== 1) fail(file, `${h1} <h1> elements`);
   }
 
+  // Every icon used must have its symbol inlined in the same page.
+  for (const m of src.matchAll(/href="#(asmagh-[a-z0-9-]+)"/g)) {
+    if (!src.includes(`<symbol id="${m[1]}"`)) fail(file, `icon ${m[1]} used but its symbol is missing`);
+  }
+
   const text = src.replace(/<script[\s\S]*?<\/script>/g, "").replace(/<[^>]+>/g, " ");
   for (const re of MONEY) if (re.test(text)) fail(file, `looks like a price: ${text.match(re)[0]}`);
   for (const re of LEFTOVERS) if (re.test(src)) fail(file, `leftover text matching ${re}`);
@@ -82,4 +87,4 @@ if (problems.length) {
   console.error(`check: ${problems.length} problem(s)\n  ` + problems.join("\n  "));
   process.exit(1);
 }
-console.log(`check: ${html.length} pages OK (links, meta, hreflang, h1, no prices, no leftovers)`);
+console.log(`check: ${html.length} pages OK (links, meta, hreflang, h1, icons, no prices, no leftovers)`);

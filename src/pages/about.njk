@@ -60,7 +60,10 @@ pageClass: about
 <section class="section section--deep facts">
   <img class="deco deco--rings-end" src="/assets/brand/deco/drop-rings-cream.svg" alt="" aria-hidden="true" loading="lazy">
   <div class="container facts__inner">
-    <h2 class="h3" data-animate>{{ tt(a.facts.title) }}</h2>
+    <div class="facts__head" data-animate>
+      <h2 class="h3">{{ tt(a.facts.title) }}</h2>
+      <img class="facts__map" src="/assets/brand/map/world-dots-cream-on-teal.svg" alt="{{ a.facts.mapAlt }}" width="1440" height="700" loading="lazy">
+    </div>
     <ul class="facts__list">
       {%- for f in a.facts.items %}
       <li data-animate>{% icon "gum-tear" %}<span>{{ f }}</span></li>

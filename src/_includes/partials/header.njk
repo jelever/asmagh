@@ -29,7 +29,7 @@
         <li class="nav__item{% if item.sub %} has-sub{% endif %}">
           <a class="nav__link" href="{{ item.href }}"{% if current %} aria-current="page"{% endif %}>{{ t.nav[item.key] }}</a>
           {%- if item.sub %}
-          <button class="nav__toggle" type="button" aria-expanded="false" aria-label="{{ t.nav.products }}" data-subtoggle><span class="chev" aria-hidden="true"></span></button>
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-label="{{ t.nav.products }}" data-subtoggle>{% icon "chevron-down" %}</button>
           <ul class="nav__sub">
             {%- for p in products | where("group", "gum") %}
             <li><a href="{{ base }}products/{{ p.slug }}/">{{ p[lang].name }}</a></li>

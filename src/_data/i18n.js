@@ -203,17 +203,17 @@ export default {
       },
       vmv: [
         {
-          icon: "global-export",
+          icon: "vision",
           title: "Our vision",
           text: "To be the most trusted name for Sudanese gum arabic and natural crops in world markets.",
         },
         {
-          icon: "gum-tear",
+          icon: "mission",
           title: "Our mission",
           text: "To deliver clean, consistent and fully documented Sudanese products, on time, while creating value for the communities that grow them.",
         },
         {
-          icon: "quality-shield",
+          icon: "partnership",
           title: "Our values",
           text: "Quality without compromise, honesty in every contract, respect for our partners and responsibility towards the land and its people.",
         },
@@ -231,6 +231,7 @@ export default {
       },
       facts: {
         title: { a: "Quick", b: "facts" },
+        mapAlt: "World map with Sudan highlighted",
         items: [
           "We export to buyers worldwide",
           "We specialise in gum arabic Hashab and Talha",
@@ -298,13 +299,13 @@ export default {
         text: "Exporting natural products means paying attention to detail at every stage. Our quality programme starts where the product is collected and follows each lot all the way to the destination port.",
       },
       steps: [
-        { icon: "gum-on-branch", title: "Sourcing", text: "We buy from trusted collectors and traders in the gum belt and in Sudan's main farming regions, and check each intake." },
+        { icon: "sourcing-trading", title: "Sourcing", text: "We buy from trusted collectors and traders in the gum belt and in Sudan's main farming regions, and check each intake." },
         { icon: "cleaning-sorting", title: "Cleaning & sorting", text: "Bark, sand and foreign matter are removed by hand and machine; lots are sorted by colour and size." },
         { icon: "grading", title: "Grading", text: "Gum is graded into hand-picked, cleaned, siftings and dust grades; crops are graded to the agreed specification." },
-        { icon: "lab-testing", title: "Testing", text: "Samples are tested for moisture, impurities and the parameters in the buyer's specification." },
+        { icon: "inspection", title: "Testing", text: "Samples are tested for moisture, impurities and the parameters in the buyer's specification." },
         { icon: "sack", title: "Packing", text: "Packed in new, clean polypropylene or jute bags, labelled with product, grade, lot and weight." },
         { icon: "warehouse", title: "Storage", text: "Stored dry and ventilated, off the ground and away from contamination until loading." },
-        { icon: "container", title: "Loading", text: "Containers are inspected before stuffing and loaded under supervision." },
+        { icon: "truck", title: "Loading", text: "Containers are inspected before stuffing and loaded under supervision." },
         { icon: "cargo-ship", title: "Shipping", text: "Shipped from Port Sudan with the full set of export documents." },
       ],
       checks: {
@@ -340,28 +341,28 @@ export default {
         title: { a: "Product", b: "certificates" },
         text: "Certificates travel with each shipment and are exchanged through the banks or directly with the buyer, so the goods clear customs at the destination.",
         items: [
-          { icon: "certificate", title: "Certificate of origin", text: "Issued by the Sudan Chamber of Commerce, confirming the goods were produced in Sudan. Available as a general certificate or in preferential forms (Arab League, COMESA, least-developed-country tariffs)." },
-          { icon: "sustainability", title: "Phytosanitary certificate", text: "Confirms the products were inspected under official procedures and are free from quarantine pests named by the importing country." },
+          { icon: "certificate-of-origin", title: "Certificate of origin", text: "Issued by the Sudan Chamber of Commerce, confirming the goods were produced in Sudan. Available as a general certificate or in preferential forms (Arab League, COMESA, least-developed-country tariffs)." },
+          { icon: "phytosanitary", title: "Phytosanitary certificate", text: "Confirms the products were inspected under official procedures and are free from quarantine pests named by the importing country." },
           { icon: "lab-testing", title: "Analysis & quality certificate", text: "Issued by the Sudanese Standards & Metrology Organization (SSMO), the government body that inspects export quality." },
           { icon: "quality-shield", title: "Fumigation certificate", text: "Shows that the goods and packing were fumigated, with the treatment, chemicals, dose and temperature used." },
-          { icon: "traceability", title: "Inspection certificate", text: "Optional. Issued by an international inspection company appointed by the buyer to verify quantity and quality." },
+          { icon: "inspection", title: "Inspection certificate", text: "Optional. Issued by an international inspection company appointed by the buyer to verify quantity and quality." },
         ],
       },
       docs: {
         title: { a: "Shipping", b: "documents" },
         items: [
-          { icon: "request-quote", title: "Export contract", text: "Attested by the Ministry of Trade and the Sudan Chamber of Commerce. Letters of credit are opened against it." },
-          { icon: "download-pdf", title: "Commercial invoice", text: "Attested by the same authorities, showing goods, quantity, value and terms." },
-          { icon: "sack", title: "Packing list", text: "Every bag loaded in each container, with counts and weights." },
-          { icon: "cargo-ship", title: "Bill of lading", text: "Issued by the shipping line when the goods are loaded on board." },
+          { icon: "contract", title: "Export contract", text: "Attested by the Ministry of Trade and the Sudan Chamber of Commerce. Letters of credit are opened against it." },
+          { icon: "request-quote", title: "Commercial invoice", text: "Attested by the same authorities, showing goods, quantity, value and terms." },
+          { icon: "packing-list", title: "Packing list", text: "Every bag loaded in each container, with counts and weights." },
+          { icon: "bill-of-lading", title: "Bill of lading", text: "Issued by the shipping line when the goods are loaded on board." },
         ],
       },
       payment: {
         title: { a: "Payment", b: "terms" },
         items: [
-          { title: "Advance payment (TT)", text: "A down payment of 20–50% by bank transfer, with the balance on receipt of the shipping document copies." },
-          { title: "Letter of credit", text: "Irrevocable letter of credit at sight — the most popular choice with our customers." },
-          { title: "Documentary collection", text: "Documents against payment (D/P), for established customers." },
+          { icon: "payment-transfer", title: "Advance payment (TT)", text: "A down payment of 20–50% by bank transfer, with the balance on receipt of the shipping document copies." },
+          { icon: "bank", title: "Letter of credit", text: "Irrevocable letter of credit at sight — the most popular choice with our customers." },
+          { icon: "contract", title: "Documentary collection", text: "Documents against payment (D/P), for established customers." },
         ],
       },
       incoterms: {
@@ -638,17 +639,17 @@ export default {
       },
       vmv: [
         {
-          icon: "global-export",
+          icon: "vision",
           title: "رؤيتنا",
           text: "أن نكون الاسم الأكثر ثقة للصمغ العربي والمحاصيل الطبيعية السودانية في الأسواق العالمية.",
         },
         {
-          icon: "gum-tear",
+          icon: "mission",
           title: "رسالتنا",
           text: "تقديم منتجات سودانية نظيفة وثابتة الجودة وموثقة بالكامل وفي موعدها، مع خلق قيمة للمجتمعات التي تنتجها.",
         },
         {
-          icon: "quality-shield",
+          icon: "partnership",
           title: "قيمنا",
           text: "جودة بلا تنازل، وأمانة في كل عقد، واحترام لشركائنا، ومسؤولية تجاه الأرض وأهلها.",
         },
@@ -666,6 +667,7 @@ export default {
       },
       facts: {
         title: { a: "حقائق", b: "سريعة" },
+        mapAlt: "خريطة العالم مع إبراز السودان",
         items: [
           "نصدّر إلى المشترين في جميع أنحاء العالم",
           "نتخصص في الصمغ العربي الهشاب والطلح",
@@ -733,13 +735,13 @@ export default {
         text: "تصدير المنتجات الطبيعية يتطلب اهتمامًا بالتفاصيل في كل مرحلة. يبدأ برنامج الجودة لدينا من مكان جمع المنتج ويتابع كل دفعة حتى ميناء الوصول.",
       },
       steps: [
-        { icon: "gum-on-branch", title: "التوريد", text: "نشتري من منتجين وتجار موثوقين في حزام الصمغ ومناطق الزراعة الرئيسية في السودان، ونفحص كل دفعة واردة." },
+        { icon: "sourcing-trading", title: "التوريد", text: "نشتري من منتجين وتجار موثوقين في حزام الصمغ ومناطق الزراعة الرئيسية في السودان، ونفحص كل دفعة واردة." },
         { icon: "cleaning-sorting", title: "التنظيف والفرز", text: "نزيل اللحاء والرمل والشوائب يدويًا وآليًا، ونفرز الدفعات حسب اللون والحجم." },
         { icon: "grading", title: "التدريج", text: "يُدرَّج الصمغ إلى منتقى يدويًا ونظيف وغربلة وغبار، وتُدرَّج المحاصيل حسب المواصفة المتفق عليها." },
-        { icon: "lab-testing", title: "الفحص", text: "تُفحص العينات للرطوبة والشوائب والمعايير الواردة في مواصفة المشتري." },
+        { icon: "inspection", title: "الفحص", text: "تُفحص العينات للرطوبة والشوائب والمعايير الواردة في مواصفة المشتري." },
         { icon: "sack", title: "التعبئة", text: "تُعبأ في أكياس بولي بروبلين أو خيش جديدة ونظيفة، مع بيان المنتج والدرجة والدفعة والوزن." },
         { icon: "warehouse", title: "التخزين", text: "تُخزن في مكان جاف وجيد التهوية، مرفوعة عن الأرض وبعيدة عن التلوث حتى التحميل." },
-        { icon: "container", title: "التحميل", text: "تُفحص الحاويات قبل التعبئة ويتم التحميل تحت الإشراف." },
+        { icon: "truck", title: "التحميل", text: "تُفحص الحاويات قبل التعبئة ويتم التحميل تحت الإشراف." },
         { icon: "cargo-ship", title: "الشحن", text: "تُشحن من بورتسودان مع المجموعة الكاملة من مستندات التصدير." },
       ],
       checks: {
@@ -775,28 +777,28 @@ export default {
         title: { a: "شهادات", b: "المنتجات" },
         text: "ترافق الشهادات كل شحنة وتُتبادل عبر البنوك أو مباشرة مع المشتري، لتُخلَّص البضاعة جمركيًا في بلد الوصول.",
         items: [
-          { icon: "certificate", title: "شهادة المنشأ", text: "تصدر عن الغرفة التجارية السودانية وتؤكد أن البضاعة من إنتاج السودان، وتتوفر بصيغة عامة أو تفضيلية (جامعة الدول العربية، الكوميسا، تعرفة الدول الأقل نموًا)." },
-          { icon: "sustainability", title: "الشهادة الصحية النباتية", text: "تؤكد أن المنتجات فُحصت وفق الإجراءات الرسمية وخالية من الآفات الحجرية التي يحددها البلد المستورد." },
+          { icon: "certificate-of-origin", title: "شهادة المنشأ", text: "تصدر عن الغرفة التجارية السودانية وتؤكد أن البضاعة من إنتاج السودان، وتتوفر بصيغة عامة أو تفضيلية (جامعة الدول العربية، الكوميسا، تعرفة الدول الأقل نموًا)." },
+          { icon: "phytosanitary", title: "الشهادة الصحية النباتية", text: "تؤكد أن المنتجات فُحصت وفق الإجراءات الرسمية وخالية من الآفات الحجرية التي يحددها البلد المستورد." },
           { icon: "lab-testing", title: "شهادة التحليل والجودة", text: "تصدر عن الهيئة السودانية للمواصفات والمقاييس، الجهة الحكومية المختصة بفحص جودة الصادرات." },
           { icon: "quality-shield", title: "شهادة التبخير", text: "تثبت تبخير البضاعة ومواد التعبئة، مع بيان المعالجة والمواد والجرعة ودرجة الحرارة." },
-          { icon: "traceability", title: "شهادة التفتيش", text: "اختيارية، تصدر عن شركة تفتيش دولية يعيّنها المشتري للتحقق من الكمية والجودة." },
+          { icon: "inspection", title: "شهادة التفتيش", text: "اختيارية، تصدر عن شركة تفتيش دولية يعيّنها المشتري للتحقق من الكمية والجودة." },
         ],
       },
       docs: {
         title: { a: "مستندات", b: "الشحن" },
         items: [
-          { icon: "request-quote", title: "عقد التصدير", text: "موثّق من وزارة التجارة والغرفة التجارية السودانية، ويُفتح خطاب الاعتماد بموجبه." },
-          { icon: "download-pdf", title: "الفاتورة التجارية", text: "موثقة من الجهات نفسها، وتبيّن البضاعة والكمية والقيمة والشروط." },
-          { icon: "sack", title: "قائمة التعبئة", text: "بيان بكل الأكياس المحمّلة في كل حاوية مع أعدادها وأوزانها." },
-          { icon: "cargo-ship", title: "بوليصة الشحن", text: "يصدرها خط الشحن عند تحميل البضاعة على متن السفينة." },
+          { icon: "contract", title: "عقد التصدير", text: "موثّق من وزارة التجارة والغرفة التجارية السودانية، ويُفتح خطاب الاعتماد بموجبه." },
+          { icon: "request-quote", title: "الفاتورة التجارية", text: "موثقة من الجهات نفسها، وتبيّن البضاعة والكمية والقيمة والشروط." },
+          { icon: "packing-list", title: "قائمة التعبئة", text: "بيان بكل الأكياس المحمّلة في كل حاوية مع أعدادها وأوزانها." },
+          { icon: "bill-of-lading", title: "بوليصة الشحن", text: "يصدرها خط الشحن عند تحميل البضاعة على متن السفينة." },
         ],
       },
       payment: {
         title: { a: "شروط", b: "الدفع" },
         items: [
-          { title: "الدفع المقدم (تحويل بنكي)", text: "دفعة مقدمة من 20 إلى 50% بالتحويل البنكي، والباقي عند استلام صور مستندات الشحن." },
-          { title: "خطاب الاعتماد", text: "خطاب اعتماد غير قابل للإلغاء عند الاطلاع، وهو الخيار الأكثر شيوعًا لدى عملائنا." },
-          { title: "التحصيل المستندي", text: "المستندات مقابل الدفع (D/P) للعملاء الدائمين." },
+          { icon: "payment-transfer", title: "الدفع المقدم (تحويل بنكي)", text: "دفعة مقدمة من 20 إلى 50% بالتحويل البنكي، والباقي عند استلام صور مستندات الشحن." },
+          { icon: "bank", title: "خطاب الاعتماد", text: "خطاب اعتماد غير قابل للإلغاء عند الاطلاع، وهو الخيار الأكثر شيوعًا لدى عملائنا." },
+          { icon: "contract", title: "التحصيل المستندي", text: "المستندات مقابل الدفع (D/P) للعملاء الدائمين." },
         ],
       },
       incoterms: {

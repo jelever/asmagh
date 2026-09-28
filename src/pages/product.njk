@@ -68,7 +68,10 @@ eleventyComputed:
 
     <aside class="product__aside">
       <div class="facts-card">
-        <h2 class="h6">{{ pt.keyFacts }}</h2>
+        <div class="facts-card__head">
+          <span class="badge badge--teal">{% icon p.icon %}</span>
+          <h2 class="h6">{{ pt.keyFacts }}</h2>
+        </div>
         <dl>
           <div><dt>{{ pt.botanical }}</dt><dd><i dir="ltr">{{ p.facts.botanical }}</i></dd></div>
           {%- if p.facts.hs %}
@@ -80,7 +83,7 @@ eleventyComputed:
         </dl>
         <p class="facts-card__note">{{ pt.hsNote }}</p>
         <a class="btn btn--block" href="{{ base }}contact/?product={{ p.slug }}">{{ t.requestQuote }}</a>
-        <a class="btn btn--outline btn--block" href="{{ base }}contact/?product={{ p.slug }}&amp;type=sample">{{ t.requestSample }}</a>
+        <a class="btn btn--outline btn--block" href="{{ base }}contact/?product={{ p.slug }}&amp;type=sample">{% icon "request-sample" %}{{ t.requestSample }}</a>
       </div>
     </aside>
   </div>
@@ -95,6 +98,7 @@ eleventyComputed:
         <a href="{{ base }}products/{{ o.slug }}/">
           <span class="product-card__media"><img src="{{ photo(o.image) }}" alt="" width="1000" height="750" loading="lazy"></span>
           <span class="product-card__body">
+            <span class="product-card__icon">{% icon o.icon %}</span>
             <span class="product-card__name h6">{{ o[lang].name }}</span>
             <span class="link-arrow">{{ t.viewDetails }}{% icon "arrow-right" %}</span>
           </span>

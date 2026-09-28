@@ -78,6 +78,11 @@ npm run check    # run before saying anything is finished; CI runs it too
   - CSS `url()` paths are relative to the stylesheet.
 - **Use logical CSS properties** (`inset-inline-*`, `border-start-end-radius`,
   `margin-inline-*`). Only arrow icons need explicit `[dir=rtl]` flips.
+- **Icons:** `{% icon "name" %}`, with names from `src/_icons/asmagh-icons-sprite.svg`
+  (the updated web-assets kit, 97 icons).
+  - The build inlines only the symbols a page uses, at `<!--ICON-SPRITE-->` in the base layout.
+  - An unknown name fails the build.
+  - `npm run check` fails if a used icon's symbol is missing from the page.
 - **Headings use `{ a, b }` pairs** for the two-tone style. The `tt()` macro
   renders `b` in the accent colour. `a` may be empty.
 - **Screenshots:** the Chrome extension's tab is hidden, so scroll animations

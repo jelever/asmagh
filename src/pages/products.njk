@@ -28,6 +28,7 @@ pageClass: products
           <img src="{{ photo(p.image) }}" alt="" width="1000" height="750" loading="lazy">
         </a>
         <div class="gum-card__body">
+          <span class="badge badge--teal gum-card__badge">{% icon p.icon %}</span>
           <p class="eyebrow"><i>{{ p.facts.botanical }}</i></p>
           <h3 class="h5"><a href="{{ base }}products/{{ p.slug }}/">{{ p[lang].name }}</a></h3>
           <p>{{ p[lang].short }}</p>
@@ -56,6 +57,7 @@ pageClass: products
         <a href="{{ base }}products/{{ p.slug }}/">
           <span class="product-card__media"><img src="{{ photo(p.image) }}" alt="" width="1000" height="750" loading="lazy"></span>
           <span class="product-card__body">
+            <span class="product-card__icon">{% icon p.icon %}</span>
             <span class="product-card__name h6">{{ p[lang].name }}</span>
             <span class="product-card__text">{{ p[lang].short }}</span>
             <span class="link-arrow">{{ t.viewDetails }}{% icon "arrow-right" %}</span>

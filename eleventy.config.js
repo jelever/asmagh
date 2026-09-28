@@ -6,7 +6,16 @@
 // PATH_PREFIX: GitHub Pages serves a project site from /asmagh/. When a custom
 // domain is attached, build with PATH_PREFIX=/ (see README.md).
 
+import { readFileSync } from "node:fs";
 import { HtmlBasePlugin } from "@11ty/eleventy";
+
+// The full Asmagh icon sprite (97 icons, ~37 KB). Each page gets only the
+// symbols it references, injected at <!--ICON-SPRITE--> in the base layout.
+const SPRITE = new Map(
+  [...readFileSync("src/_icons/asmagh-icons-sprite.svg", "utf8").matchAll(
+    /<symbol id="asmagh-([a-z0-9-]+)"[\s\S]*?<\/symbol>/g
+  )].map((m) => [m[1], m[0]])
+);
 
 export default function (eleventyConfig) {
   // Rewrites root-relative URLs (href, src, srcset...) to include pathPrefix.
@@ -29,12 +38,22 @@ export default function (eleventyConfig) {
     siteUrl.replace(/\/$/, "") + path
   );
 
-  // Brand line icon from the inline sprite (partials/sprite.svg).
-  eleventyConfig.addShortcode(
-    "icon",
-    (name, cls = "") =>
-      `<svg class="icon ${cls}" aria-hidden="true" focusable="false"><use href="#asmagh-${name}"></use></svg>`
-  );
+  // Brand line icon. Unknown names fail the build rather than render blank.
+  eleventyConfig.addShortcode("icon", (name, cls = "") => {
+    if (!SPRITE.has(name)) throw new Error(`Unknown icon "${name}" (not in src/_icons/asmagh-icons-sprite.svg)`);
+    return `<svg class="icon ${cls}" aria-hidden="true" focusable="false"><use href="#asmagh-${name}"></use></svg>`;
+  });
+
+  // Inline only the symbols this page uses.
+  eleventyConfig.addTransform("icon-sprite", function (content) {
+    if (!(this.page.outputPath || "").endsWith(".html") || !content.includes("<!--ICON-SPRITE-->")) return content;
+    const used = [...new Set([...content.matchAll(/href="#asmagh-([a-z0-9-]+)"/g)].map((m) => m[1]))];
+    const symbols = used.map((n) => SPRITE.get(n) || "").join("");
+    return content.replace(
+      "<!--ICON-SPRITE-->",
+      `<svg xmlns="http://www.w3.org/2000/svg" style="display:none">${symbols}</svg>`
+    );
+  });
 
   eleventyConfig.addFilter("find", (arr, key, value) =>
     (arr || []).find((item) => item[key] === value)

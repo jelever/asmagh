@@ -9,7 +9,7 @@ export default [
   {
     slug: "gum-arabic-hashab",
     group: "gum",
-    icon: "gum-tear",
+    icon: "hand-picked",
     image: "product-gum-arabic.jpg",
     facts: {
       botanical: "Acacia senegal (Senegalia senegal)",
@@ -121,7 +121,7 @@ export default [
   {
     slug: "sesame",
     group: "crop",
-    icon: "grading",
+    icon: "sesame",
     image: "product-sesame.jpg",
     facts: {
       botanical: "Sesamum indicum",
@@ -161,7 +161,7 @@ export default [
   {
     slug: "hibiscus",
     group: "crop",
-    icon: "sustainability",
+    icon: "hibiscus",
     image: "product-hibiscus.jpg",
     facts: {
       botanical: "Hibiscus sabdariffa",
@@ -201,7 +201,7 @@ export default [
   {
     slug: "olibanum",
     group: "crop",
-    icon: "gum-on-branch",
+    icon: "frankincense",
     image: "product-olibanum.jpg",
     facts: {
       botanical: "Boswellia papyrifera",
@@ -245,7 +245,7 @@ export default [
   {
     slug: "watermelon-seeds",
     group: "crop",
-    icon: "raw-tears",
+    icon: "watermelon-seeds",
     image: "product-watermelon-seeds.jpg",
     facts: {
       botanical: "Citrullus lanatus",
@@ -287,7 +287,7 @@ export default [
   {
     slug: "peanuts",
     group: "crop",
-    icon: "kibbled",
+    icon: "peanuts",
     image: "product-peanuts.jpg",
     facts: {
       botanical: "Arachis hypogaea",
@@ -329,7 +329,7 @@ export default [
   {
     slug: "pigeon-pea",
     group: "crop",
-    icon: "raw-tears",
+    icon: "pulses",
     image: "product-pigeon-pea.jpg",
     facts: {
       botanical: "Cajanus cajan",
@@ -361,7 +361,7 @@ export default [
   {
     slug: "henna",
     group: "crop",
-    icon: "sustainability",
+    icon: "henna",
     image: "product-henna.jpg",
     facts: {
       botanical: "Lawsonia inermis",
@@ -393,7 +393,7 @@ export default [
   {
     slug: "chickpeas",
     group: "crop",
-    icon: "raw-tears",
+    icon: "chickpeas",
     image: "product-chickpeas.jpg",
     facts: {
       botanical: "Cicer arietinum",
@@ -425,7 +425,7 @@ export default [
   {
     slug: "senna",
     group: "crop",
-    icon: "sustainability",
+    icon: "senna-pods",
     image: "product-senna.jpg",
     facts: {
       botanical: "Senna alexandrina",
@@ -457,7 +457,7 @@ export default [
   {
     slug: "cumin",
     group: "crop",
-    icon: "grading",
+    icon: "cumin",
     image: "product-cumin.jpg",
     facts: {
       botanical: "Cuminum cyminum",
@@ -489,7 +489,7 @@ export default [
   {
     slug: "baobab",
     group: "crop",
-    icon: "acacia-tree",
+    icon: "baobab",
     image: "product-baobab.jpg",
     facts: {
       botanical: "Adansonia digitata",
@@ -521,7 +521,7 @@ export default [
   {
     slug: "sorghum",
     group: "crop",
-    icon: "crop-year",
+    icon: "grains",
     image: "product-sorghum.jpg",
     facts: {
       botanical: "Sorghum bicolor",
@@ -553,7 +553,7 @@ export default [
   {
     slug: "millet",
     group: "crop",
-    icon: "crop-year",
+    icon: "grains",
     image: "product-millet.jpg",
     facts: {
       botanical: "Pennisetum glaucum",
@@ -585,7 +585,7 @@ export default [
   {
     slug: "soybean",
     group: "crop",
-    icon: "kibbled",
+    icon: "soybean",
     image: "product-soybean.jpg",
     facts: {
       botanical: "Glycine max",
@@ -617,7 +617,7 @@ export default [
   {
     slug: "dried-lime",
     group: "crop",
-    icon: "sustainability",
+    icon: "dried-lime",
     image: "product-dried-lime.jpg",
     facts: {
       botanical: "Citrus aurantiifolia",

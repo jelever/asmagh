@@ -28,7 +28,8 @@ npm run check      # link, meta, hreflang, h1, no-prices checks over _site/
 | `src/_data/site.js` | Site URL, contact details, Formspree ID, home-page metrics |
 | `src/_data/credits.json` | Source, author and licence of every photo |
 | `src/pages/` | Page templates; each is built once per language |
-| `src/_includes/` | Layout, header, footer, page hero, contact banner, icon sprite |
+| `src/_includes/` | Layout, header, footer, page hero, contact banner |
+| `src/_icons/asmagh-icons-sprite.svg` | All 97 brand icons; each page inlines only the ones it uses |
 | `src/assets/css/main.css` | The whole stylesheet (logical properties, so RTL mirrors itself) |
 | `src/assets/js/main.js` | Carousel, sticky header, menu, animations, slider, form |
 | `src/assets/brand/` | Logos, decorations, masks and map from the Asmagh identity kit |
