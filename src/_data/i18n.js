@@ -151,8 +151,8 @@ export default {
           "Buyers can appoint any international inspection company to verify quantity and quality before shipment.",
         ],
         cta: "Our process",
-        image: "quality-sorting.jpg",
-        alt: "Sorting agricultural produce",
+        image: "quality-gum-inspection.jpg",
+        alt: "Hands holding up a large amber tear of Sudanese gum arabic for inspection",
       },
       origin: {
         title: { a: "Where our", b: "gum grows" },
@@ -587,8 +587,8 @@ export default {
           "ويمكن للمشتري تعيين أي شركة تفتيش دولية للتحقق من الكمية والجودة قبل الشحن.",
         ],
         cta: "عملياتنا",
-        image: "quality-sorting.jpg",
-        alt: "فرز المنتجات الزراعية",
+        image: "quality-gum-inspection.jpg",
+        alt: "يدان تحملان دمعة كبيرة كهرمانية من الصمغ العربي السوداني لفحصها",
       },
       origin: {
         title: { a: "حيث ينمو", b: "صمغنا" },
