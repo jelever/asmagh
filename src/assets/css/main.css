@@ -2,7 +2,7 @@
    Asmagh Sudanese Exports: site stylesheet
    Layout language follows the olamagri reference (two-tone headings,
    opposite-corner media, leaf-corner button hover, quarter-curve hero,
-   dark metrics band, curved contact banner); identity is Asmagh's.
+   dark metrics band, contact banner); identity is Asmagh's.
    Mobile first. Logical properties throughout so RTL mirrors itself.
    ========================================================================== */
 
@@ -99,6 +99,7 @@ main:focus { outline: none; }
   width: 1.25em; height: 1.25em; flex-shrink: 0;
   stroke: currentColor; fill: none;
 }
+.icon--fill { stroke: none; fill: currentColor; }
 
 .container {
   width: 100%;
@@ -557,22 +558,25 @@ main:focus { outline: none; }
 }
 
 /* ---------- Contact banner ---------- */
+/* Heading, two actions and the acacia horizon at the foot. */
 .banner {
-  position: relative; background: var(--deep); color: var(--muted-on-teal);
-  text-align: center; padding-block: 24px clamp(72px, 8vw, 110px);
-  margin-top: clamp(40px, 6vw, 100px);
+  position: relative; overflow: hidden;
+  background: var(--deep); color: var(--muted-on-teal);
+  text-align: center; padding-top: clamp(72px, 8vw, 110px);
 }
-.banner__curve {
-  position: absolute; bottom: calc(100% - 1px); inset-inline: 0;
-  width: 100%; max-width: none; height: clamp(40px, 6vw, 100px);
-}
-.banner__inner { position: relative; max-width: 920px; }
-.banner__deco { position: absolute; width: 420px; opacity: .1; top: -60px; pointer-events: none; }
-.banner__deco--start { inset-inline-start: -300px; }
-.banner__icon { display: inline-grid; color: var(--amber); margin-bottom: 18px; }
-.banner__icon .icon { width: 88px; height: 88px; }
+/* About ends with its own acacia landscape, so the banner skips its horizon. */
+.page-about .banner__horizon { display: none; }
+.page-about .banner__inner { padding-bottom: clamp(72px, 8vw, 110px); }
+.banner__inner { position: relative; z-index: 2; max-width: 920px; padding-bottom: clamp(120px, 15vw, 220px); }
 .banner h2 { color: var(--on-dark); }
 .banner p { max-width: 640px; margin: 0 auto 28px; font-size: 1.05rem; }
+.banner__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+.btn--ghost { background: transparent; color: var(--on-dark); box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .7); }
+.btn--ghost:hover { background: var(--on-dark); color: var(--teal); }
+.banner__horizon {
+  position: absolute; bottom: 0; inset-inline: 0; z-index: 1;
+  width: 100%; max-width: none; height: auto; pointer-events: none;
+}
 
 /* ---------- Footer ---------- */
 .site-footer {

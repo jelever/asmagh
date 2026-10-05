@@ -50,6 +50,7 @@ export default {
 
     banner: {
       title: { a: "Talk to", b: "us" },
+      whatsapp: "Chat on WhatsApp",
       text: "Tell us what you need — the product, grade, quantity and destination port — and our team will come back to you with an offer.",
     },
 
@@ -489,6 +490,7 @@ export default {
 
     banner: {
       title: { a: "تحدّث", b: "إلينا" },
+      whatsapp: "تواصل عبر واتساب",
       text: "أخبرنا بما تحتاجه من منتج ودرجة وكمية وميناء وصول، وسيعود إليك فريقنا بعرض مناسب.",
     },
 
