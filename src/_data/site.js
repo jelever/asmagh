@@ -23,10 +23,11 @@ export default {
 
   contact: {
     placeholder: true, // TODO: set to false once the real details are in.
-    phone: "+249 000 000 000", // TODO
-    phoneHref: "+249000000000", // TODO: digits only, with country code
-    whatsapp: "249000000000", // TODO: digits only, for https://wa.me/
-    email: "info@example.com", // TODO
+    phone: "+249 90 444 3343",
+    phoneHref: "+249904443343", // digits only, with country code
+    whatsapp: "249904443343", // digits only, for https://wa.me/ (same number as phone)
+    whatsappDisplay: "+249 90 444 3343",
+    email: "contact@asmagh.com",
     address: {
       en: "Khartoum, Sudan", // TODO
       ar: "الخرطوم، السودان", // TODO

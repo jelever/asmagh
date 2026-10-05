@@ -34,7 +34,7 @@
       <ul class="footer__contact">
         <li>{% icon "location" %}<span>{{ site.contact.address[lang] }}</span></li>
         <li>{% icon "phone" %}<a href="tel:{{ site.contact.phoneHref }}" dir="ltr">{{ site.contact.phone }}</a></li>
-        <li>{% icon "chat" %}<a href="https://wa.me/{{ site.contact.whatsapp }}" rel="noopener" target="_blank">{{ i18n[lang].contact.whatsapp }}</a></li>
+        <li>{% include "partials/icon-whatsapp.svg" %}<a href="https://wa.me/{{ site.contact.whatsapp }}" rel="noopener" target="_blank">{{ i18n[lang].contact.whatsapp }}</a></li>
         <li>{% icon "email" %}<a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></li>
       </ul>
       {%- if site.social.length %}

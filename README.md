@@ -62,8 +62,11 @@ field in `src/_data/products.js`; the page shows the link and the file size.
 
 These are placeholders and must be replaced with real details:
 
-1. **Contact details** in `src/_data/site.js`: phone, WhatsApp, email,
-   address, social profiles. Then set `contact.placeholder` to `false`.
+1. **Contact details** in `src/_data/site.js`: phone, WhatsApp and email
+   are real (contact@asmagh.com, +249 90 444 3343). Still to confirm: the
+   address (currently "Khartoum, Sudan"), the working hours and social
+   profiles. Then set `contact.placeholder` to `false`, which removes the
+   "being finalised" note on the contact page.
 2. **Formspree form ID**: create a form at formspree.io with the company
    email, and put its ID in `formspreeId`. Until then the form tells visitors
    to email or call instead of pretending to send.

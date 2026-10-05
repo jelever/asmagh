@@ -107,7 +107,7 @@ hideBanner: true
         <ul class="contact-list">
           <li>{% icon "headquarters" %}<div><span class="contact-list__label">{{ c.address }}</span>{{ site.contact.address[lang] }}</div></li>
           <li>{% icon "phone" %}<div><span class="contact-list__label">{{ c.phone }}</span><a href="tel:{{ site.contact.phoneHref }}" dir="ltr">{{ site.contact.phone }}</a></div></li>
-          <li>{% icon "chat" %}<div><span class="contact-list__label">{{ c.whatsapp }}</span><a href="https://wa.me/{{ site.contact.whatsapp }}" rel="noopener" target="_blank" dir="ltr">+{{ site.contact.whatsapp }}</a></div></li>
+          <li>{% include "partials/icon-whatsapp.svg" %}<div><span class="contact-list__label">{{ c.whatsapp }}</span><a href="https://wa.me/{{ site.contact.whatsapp }}" rel="noopener" target="_blank" dir="ltr">{{ site.contact.whatsappDisplay }}</a></div></li>
           <li>{% icon "email" %}<div><span class="contact-list__label">{{ c.email }}</span><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></div></li>
           <li>{% icon "working-hours" %}<div><span class="contact-list__label">{{ c.hours }}</span>{{ site.contact.hours[lang] }}</div></li>
         </ul>
