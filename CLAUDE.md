@@ -16,7 +16,8 @@ database.
 - **Languages:** Arabic (RTL, default) at `/ar/`, English at `/en/`. `/` redirects by browser language.
 - **Stack:** Eleventy 3, Nunjucks templates, one CSS file and one JS file, no frameworks.
 - **Hosting:** GitHub Pages, deployed by GitHub Actions. There is no Railway project.
-- **URL:** https://jelever.github.io/asmagh/ (project site, so `pathPrefix` is `/asmagh/`).
+- **URL:** https://asmagh.com (custom domain on GitHub Pages, served at the root, so `pathPrefix` is `/`).
+  The old https://jelever.github.io/asmagh/ redirects to it.
 - **GitHub:** `jelever/asmagh`. It is **public**, because free-plan Pages needs a
   public repository. This is a deliberate exception to the portfolio's
   private-repo rule, chosen by the user.
@@ -76,7 +77,7 @@ npm run check    # run before saying anything is finished; CI runs it too
     and the breadcrumb showed `[object Object]`.
 - **Links are root-relative** (`/en/...`, `/assets/...`), and
   `HtmlBasePlugin` adds the path prefix.
-  - Never hard-code `/asmagh/` in templates.
+  - Never hard-code a path prefix or the domain in templates. Use `site.url` and root-relative links.
   - CSS `url()` paths are relative to the stylesheet.
 - **Use logical CSS properties** (`inset-inline-*`, `border-start-end-radius`,
   `margin-inline-*`). Only arrow icons need explicit `[dir=rtl]` flips.

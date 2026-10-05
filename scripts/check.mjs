@@ -8,7 +8,7 @@ import { readFileSync, readdirSync, statSync, existsSync } from "node:fs";
 import { join, relative } from "node:path";
 
 const OUT = "_site";
-const PREFIX = (process.env.PATH_PREFIX || "/asmagh/").replace(/\/?$/, "/");
+const PREFIX = (process.env.PATH_PREFIX || "/").replace(/\/?$/, "/");
 
 const files = [];
 (function walk(dir) {

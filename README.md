@@ -14,7 +14,7 @@ Requires Node 20 or later.
 
 ```bash
 npm install
-npm start          # http://localhost:8765/asmagh/ar/  (live reload)
+npm start          # http://localhost:8765/ar/  (live reload)
 npm run build      # writes _site/
 npm run check      # link, meta, hreflang, h1, no-prices checks over _site/
 ```
@@ -82,13 +82,16 @@ The workflow in `.github/workflows/pages.yml` builds, checks and deploys on
 every push to `main`. One-time setup: **Settings → Pages → Source: GitHub
 Actions**.
 
-The site is served from `https://jelever.github.io/asmagh/`, so it builds
-with `PATH_PREFIX=/asmagh/` (the default). For a custom domain:
+The site is served from the custom domain **https://asmagh.com**, at the
+root, so it builds with `PATH_PREFIX=/` and `SITE_URL=https://asmagh.com`
+(the defaults). `src/static/CNAME` holds the domain, and Settings -> Pages
+has it set with **Enforce HTTPS** on.
 
-1. Add `src/static/CNAME` containing the domain.
-2. In the workflow, set `PATH_PREFIX: /` and `SITE_URL: https://<domain>` as
-   environment variables for the build and check steps.
-3. Point DNS at GitHub Pages and enable **Enforce HTTPS**.
+If the domain is ever removed, GitHub serves the site at
+`https://jelever.github.io/asmagh/` instead. Then build with
+`PATH_PREFIX=/asmagh/` and `SITE_URL=https://jelever.github.io/asmagh`
+(set them as environment variables on the build and check steps of the
+workflow), or every stylesheet, image and link will 404.
 
 ## Licences
 

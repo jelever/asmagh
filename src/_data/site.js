@@ -6,8 +6,8 @@
 
 export default {
   // Public URL of the site, without a trailing slash. Change when a custom
-  // domain is attached (and build with PATH_PREFIX=/).
-  url: process.env.SITE_URL || "https://jelever.github.io/asmagh",
+  // domain changes (and keep PATH_PREFIX in step, see eleventy.config.js).
+  url: process.env.SITE_URL || "https://asmagh.com",
 
   langs: ["ar", "en"],
   defaultLang: "ar",

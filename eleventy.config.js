@@ -3,8 +3,10 @@
 // Every page template in src/pages is paginated over the two languages, so one
 // template produces both /en/... and /ar/.... All copy lives in src/_data.
 //
-// PATH_PREFIX: GitHub Pages serves a project site from /asmagh/. When a custom
-// domain is attached, build with PATH_PREFIX=/ (see README.md).
+// PATH_PREFIX: the site lives at the root of https://asmagh.com, so the default
+// prefix is "/". To build for the bare project URL instead
+// (https://jelever.github.io/asmagh/), set PATH_PREFIX=/asmagh/ and
+// SITE_URL=https://jelever.github.io/asmagh (see README.md).
 
 import { readFileSync, statSync } from "node:fs";
 import { HtmlBasePlugin } from "@11ty/eleventy";
@@ -85,7 +87,7 @@ export default function (eleventyConfig) {
 
   return {
     dir: { input: "src", includes: "_includes", data: "_data", output: "_site" },
-    pathPrefix: process.env.PATH_PREFIX || "/asmagh/",
+    pathPrefix: process.env.PATH_PREFIX || "/",
     templateFormats: ["njk", "md"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
