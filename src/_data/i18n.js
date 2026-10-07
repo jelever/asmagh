@@ -132,7 +132,7 @@ export default {
         products: "Products in our catalogue",
       },
       about: {
-        title: { a: "One partner for", b: "Sudan's natural riches" },
+        title: { a: "Trust that travels", b: "from the land of Sudan to the world" },
         text: [
           "Behind every shipment is a team that knows the Sudanese market from the collection points to the port. We choose our sources carefully, clean and grade every lot, and prepare documents that clear customs without surprises.",
           "Whether you need a trial sample or a long-term supply contract, we tailor grade, packing and shipping to your specification.",
@@ -190,7 +190,7 @@ export default {
     about: {
       hero: {
         title: { a: "About", b: "Asmagh" },
-        text: "A Sudanese export house specialising in gum arabic, with a wider catalogue of Sudan's agricultural crops.",
+        text: "A Sudanese company specialising in the export of gum arabic, Hashab and Talha, alongside a selection of Sudan's finest agricultural crops.",
       },
       who: {
         title: { a: "Who", b: "we are" },
@@ -572,7 +572,7 @@ export default {
         products: "منتجًا في قائمتنا",
       },
       about: {
-        title: { a: "شريك واحد", b: "لخيرات السودان الطبيعية" },
+        title: { a: "ثقةٌ تمتد", b: "من أرض السودان إلى العالم" },
         text: [
           "خلف كل شحنة فريق يعرف السوق السوداني من مناطق الجمع حتى الميناء. نختار مصادرنا بعناية، وننظف كل دفعة ونفرزها، ونُعدّ مستندات تُخلَّص جمركيًا دون مفاجآت.",
           "سواء احتجت عينة تجريبية أو عقد توريد طويل الأجل، نكيّف الدرجة والتعبئة والشحن وفق مواصفاتك.",
@@ -629,7 +629,7 @@ export default {
     about: {
       hero: {
         title: { a: "عن", b: "أصماغ" },
-        text: "بيت تصدير سوداني متخصص في الصمغ العربي، مع قائمة أوسع من المحاصيل الزراعية السودانية.",
+        text: "شركة سودانية متخصصة في تصدير الصمغ العربي بنوعيه الهشاب والطلح، إلى جانب مجموعة مختارة من أجود المحاصيل الزراعية السودانية.",
       },
       who: {
         title: { a: "من", b: "نحن" },
