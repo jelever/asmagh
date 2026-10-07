@@ -67,9 +67,11 @@ These are placeholders and must be replaced with real details:
    address (currently "Khartoum, Sudan"), the working hours and social
    profiles. Then set `contact.placeholder` to `false`, which removes the
    "being finalised" note on the contact page.
-2. **Formspree form ID**: create a form at formspree.io with the company
-   email, and put its ID in `formspreeId`. Until then the form tells visitors
-   to email or call instead of pretending to send.
+2. **Contact form**: connected to Formspree (form `xaeqqjab`, endpoint
+   `https://formspree.io/f/xaeqqjab`), set as `formspreeId` in `site.js`.
+   Keep **reCAPTCHA off** in the form's Formspree settings: the site submits
+   with fetch (AJAX), which Formspree's reCAPTCHA rejects. If submissions
+   fail, the browser console shows Formspree's reason.
 3. **Home-page metrics** (`site.metrics`): currently facts about the
    catalogue (2 gum types, 5 grades, 3 forms, 17 products). Replace with
    company figures when available.

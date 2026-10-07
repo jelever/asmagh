@@ -233,7 +233,13 @@
       say("", "");
       fetch(form.action, { method: "POST", body: data, headers: { Accept: "application/json" } })
         .then(function (res) {
-          if (!res.ok) throw new Error(String(res.status));
+          if (!res.ok) {
+            // Keep Formspree's reason (e.g. reCAPTCHA on, unverified email) for debugging.
+            return res.json().catch(function () { return {}; }).then(function (body) {
+              console.warn("Form submission rejected", res.status, body && body.errors ? body.errors : body);
+              throw new Error(String(res.status));
+            });
+          }
           form.reset();
           say(form.dataset.msgSuccess, "success");
         })

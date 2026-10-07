@@ -18,8 +18,10 @@ export default {
   },
 
   // Formspree form ID (the part after https://formspree.io/f/).
-  // TODO: create the form in the company's Formspree account and paste its ID.
-  formspreeId: "YOUR_FORM_ID",
+  // Endpoint https://formspree.io/f/xaeqqjab. In the form's Formspree settings,
+  // reCAPTCHA must stay OFF: the site submits with fetch (AJAX), which
+  // Formspree's reCAPTCHA rejects. Spam is handled by the _gotcha honeypot.
+  formspreeId: "xaeqqjab",
 
   contact: {
     placeholder: true, // TODO: set to false once the real details are in.

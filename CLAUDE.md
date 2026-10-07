@@ -48,10 +48,10 @@ database.
 
 1. Confirm the address and working hours, then set `contact.placeholder` to
    `false` in `src/_data/site.js`. Phone, WhatsApp and email are real since
-   2026-10-05. Add the Formspree ID.
+   2026-10-05. The contact form is connected to Formspree (`xaeqqjab`)
+   since 2026-10-07; keep its reCAPTCHA off.
 2. Replace the catalogue metrics with real company figures.
 3. Replace the Commons stock photos with company photos. Keep `credits.json` in step.
-4. Decide on a custom domain (README → Publishing).
 
 **Launch baseline:** tracked in `../../SITES.md`.
 
